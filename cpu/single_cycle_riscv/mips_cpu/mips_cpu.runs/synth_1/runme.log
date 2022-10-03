@@ -1,0 +1,549 @@
+
+*** Running vivado
+    with args -log LogisimToplevelShell.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source LogisimToplevelShell.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source LogisimToplevelShell.tcl -notrace
+Command: synth_design -top LogisimToplevelShell -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3816
+WARNING: [Synth 8-992] reloadvalue2 is already implicitly declared earlier [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/base/LogisimTickGenerator.v:33]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1018.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LogisimToplevelShell' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v:9]
+INFO: [Synth 8-6157] synthesizing module 'LogisimTickGenerator' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/base/LogisimTickGenerator.v:9]
+	Parameter NrOfBits bound to: 32 - type: integer 
+	Parameter ReloadValue bound to: 3125000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LogisimTickGenerator' (1#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/base/LogisimTickGenerator.v:9]
+INFO: [Synth 8-6157] synthesizing module 'LogisimClockComponent' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/base/LogisimClockComponent.v:9]
+	Parameter NrOfBits bound to: 1 - type: integer 
+	Parameter LowTicks bound to: 1 - type: integer 
+	Parameter HighTicks bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LogisimClockComponent' (2#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/base/LogisimClockComponent.v:9]
+INFO: [Synth 8-6157] synthesizing module 'single_cycle_riscv' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_bus_2' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+	Parameter NrOfBits bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_bus_2' (3#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Adder' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Adder.v:9]
+	Parameter ExtendedBits bound to: 33 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Adder' (4#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Adder.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_bus_4' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v:9]
+	Parameter NrOfBits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_bus_4' (5#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_bus_2__parameterized0' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_bus_2__parameterized0' (5#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Shifter_32_bit' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+	Parameter ShifterMode bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Shifter_32_bit' (6#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Bit_Extender_8_32' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Bit_Extender_8_32' (7#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Comparator' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Comparator.v:9]
+	Parameter TwosComplement bound to: 1 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Comparator' (8#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Comparator.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE' (9#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Bit_Extender_12_32_SIGN' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Bit_Extender_12_32_SIGN' (10#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_bus_2__parameterized1' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+	Parameter NrOfBits bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_bus_2__parameterized1' (10#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'REGISTER_FLIP_FLOP_PC' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v:9]
+	Parameter ActiveLevel bound to: 1 - type: integer 
+	Parameter NrOfBits bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REGISTER_FLIP_FLOP_PC' (11#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FPGADigit' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/FPGADigit.v:9]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/divider.v:2]
+	Parameter N bound to: 5000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (12#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/divider.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/Counter.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (13#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/Counter.v:2]
+INFO: [Synth 8-6157] synthesizing module 'decoder3_8' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/decoder3_8.v:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/decoder3_8.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'decoder3_8' (14#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/decoder3_8.v:2]
+INFO: [Synth 8-6157] synthesizing module 'display_sel' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/display_sel.v:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/display_sel.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'display_sel' (15#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/display_sel.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_dec' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/sevenseg_dec.v:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/sevenseg_dec.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_dec' (16#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/sevenseg_dec.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'FPGADigit' (17#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/io/FPGADigit.v:9]
+INFO: [Synth 8-6157] synthesizing module 'RAM_Data_RAM' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_Data_RAM' (18#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_BUS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_BUS' (19#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'REGISTER_FLIP_FLOP' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v:9]
+	Parameter ActiveLevel bound to: 1 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REGISTER_FLIP_FLOP' (20#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE' (21#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE.v:9]
+INFO: [Synth 8-6157] synthesizing module 'NOT_GATE' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/NOT_GATE.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'NOT_GATE' (22#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/NOT_GATE.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Bit_Extender_20_32_SIGN' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Bit_Extender_20_32_SIGN' (23#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE__parameterized0' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE.v:9]
+	Parameter BubblesMask bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE__parameterized0' (23#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Order_ROM' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Order_ROM' (24#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v:9]
+INFO: [Synth 8-6157] synthesizing module 'REGISTER_FLIP_FLOP_PC__parameterized0' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v:9]
+	Parameter ActiveLevel bound to: 1 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REGISTER_FLIP_FLOP_PC__parameterized0' (24#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_3_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_3_INPUTS' (25#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'hardwired_controller' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/hardwired_controller.v:9]
+INFO: [Synth 8-6157] synthesizing module 'arithmetic_controller' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/arithmetic_controller.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_7_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_7_INPUTS' (26#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_10_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_10_INPUTS' (27#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_8_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_8_INPUTS' (28#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_14_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_14_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_14_INPUTS' (29#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_14_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_10_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_10_INPUTS' (30#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'arithmetic_controller' (31#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/arithmetic_controller.v:9]
+INFO: [Synth 8-6157] synthesizing module 'signal_generator' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/signal_generator.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_5_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_5_INPUTS' (32#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_7_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_7_INPUTS' (33#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_11_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_11_INPUTS' (34#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_6_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_6_INPUTS' (35#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_9_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_9_INPUTS' (36#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'AND_GATE_6_INPUTS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_6_INPUTS' (37#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'signal_generator' (38#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/signal_generator.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'hardwired_controller' (39#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/hardwired_controller.v:9]
+INFO: [Synth 8-6157] synthesizing module 'regfile1' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'regfile1' (40#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/ALU.v:9]
+INFO: [Synth 8-6157] synthesizing module 'OR_GATE_BUS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_BUS' (41#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_bus_16' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v:9]
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_bus_16' (42#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v:9]
+INFO: [Synth 8-6157] synthesizing module 'NOR_GATE_BUS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'NOR_GATE_BUS' (43#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'XOR_GATE_BUS' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v:9]
+	Parameter BubblesMask bound to: 0 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'XOR_GATE_BUS' (44#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Shifter_32_bit__parameterized0' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+	Parameter ShifterMode bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Shifter_32_bit__parameterized0' (44#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Comparator__parameterized0' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Comparator.v:9]
+	Parameter TwosComplement bound to: 0 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Comparator__parameterized0' (44#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Comparator.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Shifter_32_bit__parameterized1' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+	Parameter ShifterMode bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Shifter_32_bit__parameterized1' (44#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Subtractor' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Subtractor.v:9]
+	Parameter ExtendedBits bound to: 33 - type: integer 
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Subtractor' (45#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/arithmetic/Subtractor.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexer_16' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_16.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexer_16' (46#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/plexers/Multiplexer_16.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (47#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/ALU.v:9]
+INFO: [Synth 8-6157] synthesizing module 'LogisimCounter' [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/LogisimCounter.v:9]
+	Parameter mode bound to: 1 - type: integer 
+	Parameter ClkEdge bound to: 1 - type: integer 
+	Parameter max_val bound to: 65535 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LogisimCounter' (48#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/LogisimCounter.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'single_cycle_riscv' (49#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'LogisimToplevelShell' (50#1) [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v:9]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1018.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1018.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1018.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1018.664 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/xdc/LogisimToplevelShell.xdc]
+Finished Parsing XDC File [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/xdc/LogisimToplevelShell.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/xdc/LogisimToplevelShell.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LogisimToplevelShell_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LogisimToplevelShell_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1100.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1100.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_75'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_91'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_95'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_98'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_118'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_127'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_133'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_144'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_157'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_158'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_187'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_195'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_223'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_226'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_246'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_255'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_9'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_25'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_34'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_35'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_42'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_65'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_106'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_108'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_120'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_123'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_135'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_145'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_148'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_165'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_172'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_243'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_244'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_248'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_2' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_256'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_14'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_19'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_21'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_44'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_68'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_77'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_107'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_117'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_119'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_170'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_181'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_201'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_221'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_231'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_239'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_253'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_4' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_268'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_10'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_30'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_39'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_64'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_71'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_93'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_103'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_113'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_115'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_116'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_122'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_137'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_162'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_167'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_171'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_173'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_176'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_177'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_179'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_194'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_203'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_207'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_220'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_230'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_235'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_242'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_52'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_84'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_99'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_111'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_142'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_149'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_168'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_191'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_237'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_6' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_252'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_12'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_17'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_47'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_67'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_86'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_128'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_130'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_147'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_155'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_160'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_164'
+INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_7' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_204'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 6     
+	   2 Input   32 Bit       Adders := 4     
+	   4 Input   32 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 32    
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 27    
+	 316 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   22 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+|Module Name                   | RTL Object    | Inference | Size (Depth x Width) | Primitives                    | 
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+|single_cycle_riscv_0/regfile0 | rf_reg        | Implied   | 32 x 32              | RAM32M x 12	                  | 
+|single_cycle_riscv_0          | RAM_1/mem_reg | Implied   | 1 K x 32             | RAM16X1S x 32	RAM256X1S x 64	 | 
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1100.539 ; gain = 81.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1129.742 ; gain = 111.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+|Module Name                   | RTL Object    | Inference | Size (Depth x Width) | Primitives                    | 
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+|single_cycle_riscv_0/regfile0 | rf_reg        | Implied   | 32 x 32              | RAM32M x 12	                  | 
+|single_cycle_riscv_0          | RAM_1/mem_reg | Implied   | 1 K x 32             | RAM16X1S x 32	RAM256X1S x 64	 | 
++------------------------------+---------------+-----------+----------------------+-------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1133.707 ; gain = 115.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |    83|
+|3     |LUT1      |    27|
+|4     |LUT2      |   205|
+|5     |LUT3      |   193|
+|6     |LUT4      |   116|
+|7     |LUT5      |   131|
+|8     |LUT6      |   711|
+|9     |MUXF7     |    63|
+|10    |MUXF8     |     6|
+|11    |RAM16X1S  |    32|
+|12    |RAM256X1S |    64|
+|13    |RAM32M    |    12|
+|14    |FDCE      |    96|
+|15    |FDRE      |    72|
+|16    |IBUF      |     6|
+|17    |OBUF      |    16|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1148.516 ; gain = 47.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1148.516 ; gain = 129.852
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1160.570 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 260 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1160.570 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 64 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+233 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:06 . Memory (MB): peak = 1160.570 ; gain = 141.906
+INFO: [Common 17-1381] The checkpoint 'C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/LogisimToplevelShell.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LogisimToplevelShell_utilization_synth.rpt -pb LogisimToplevelShell_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  7 19:17:08 2022...

@@ -1,0 +1,428 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 8440
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Sep 12 12:55:51 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 2880x1800
+Screen resolution (DPI): 200
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=24
+Scale size: 48
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	honghongyu
+User home directory: C:/Users/honghongyu
+User working directory: C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/honghongyu/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/honghongyu/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/honghongyu/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/vivado.log
+Vivado journal file location: 	C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/vivado.jou
+Engine tmp dir: 	C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/.Xil/Vivado-8440-BCC4
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,023 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\honghongyu\verilog\remake\cpu21-riscv\single_cycle_riscv\mips_cpu\mips_cpu.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 72 MB. Current time: 9/12/22, 12:55:53 PM CST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 94 MB (+96197kb) [00:00:17]
+// [Engine Memory]: 1,023 MB (+921168kb) [00:00:17]
+// [GUI Memory]: 102 MB (+3386kb) [00:00:19]
+// [GUI Memory]: 109 MB (+2210kb) [00:00:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  6137 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 1016.746 ; gain = 0.000 
+// Project name: mips_cpu; location: C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu; part: xc7a100tcsg324-1
+// [GUI Memory]: 129 MB (+15320kb) [00:00:24]
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 139 MB (+3198kb) [00:00:28]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (LogisimToplevelShell.v) elapsed time: 0.2s
+// [GUI Memory]: 152 MB (+6267kb) [00:02:13]
+// Elapsed time: 109 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v)]", 1, true); // D - Node
+// [GUI Memory]: 161 MB (+1973kb) [00:02:14]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), LogisimTickGenerator_0 : LogisimTickGenerator (LogisimTickGenerator.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), LogisimTickGenerator_0 : LogisimTickGenerator (LogisimTickGenerator.v)]", 2, false, false, false, false, false, true); // D - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v)]", 4); // D
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), REGISTER_FILE_3 : REGISTER_FLIP_FLOP_PC (REGISTER_FLIP_FLOP_PC.v)]", 40, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), REGISTER_FILE_3 : REGISTER_FLIP_FLOP_PC (REGISTER_FLIP_FLOP_PC.v)]", 40, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), REGISTER_FILE_3 : REGISTER_FLIP_FLOP_PC (REGISTER_FLIP_FLOP_PC.v)]", 40, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 71 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), hardwired_controller_1 : hardwired_controller (hardwired_controller.v)]", 45); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), hardwired_controller_1 : hardwired_controller (hardwired_controller.v)]", 45); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), ALU_1 : ALU (ALU.v)]", 47); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v), single_cycle_riscv_0 : single_cycle_riscv (single_cycle_riscv.v), ALU_1 : ALU (ALU.v)]", 47); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 99 MB. Current time: 9/12/22, 1:39:42 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  120005 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  190171177 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2887 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1148 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1200 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  192214328 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 99 MB. Current time: 9/14/22, 6:35:07 PM CST
+// Elapsed time: 192966 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// cD (cr): Launch Runs: addNotify
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cA' command handler elapsed time: 3 seconds
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // cD
+// TclEventType: RUN_RESET
+// bz (cr):  Generate Bitstream : addNotify
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Sep 14 18:35:48 2022] Launched impl_1... Run output will be captured here: C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 522ms to process. Increasing delay to 3000 ms.
+// ag (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 101 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// PAPropertyPanels.initPanels (REGISTER_FLIP_FLOP_PC.v) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  5434 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_hw_manager: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1016.746 ; gain = 0.000 
+// 'Q' command handler elapsed time: 6 seconds
+dismissDialog("Open Hardware Manager"); // bz
+// WARNING: HEventQueue.dispatchEvent() is taking  1110 ms.
+// Elapsed time: 243 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ak
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bz (cr):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2020.2   **** Build date : Nov 18 2020 at 10:01:48     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// WARNING: HEventQueue.dispatchEvent() is taking  3247 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3257 ms to process. Increasing delay to 2000 ms.
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2020.2   ****** Build date   : Nov 04 2020-05:02:56     **** Build number : 2020.2.1604437376       ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.746 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  14578 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292747840A 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,362 MB. GUI used memory: 105 MB. Current time: 9/14/22, 6:42:16 PM CST
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2430.113 ; gain = 1413.367 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 2,362 MB (+1350679kb) [53:46:40]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 37 seconds
+dismissDialog("Auto Connect"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cr):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// Elapsed time: 198 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_DESIGN, "Close Hardware Manager"); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_DESIGN
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close Hardware Manager : addNotify
+dismissDialog("Confirm Close"); // A
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// WARNING: HEventQueue.dispatchEvent() is taking  1924 ms.
+// Tcl Message: close_hw_manager 
+// 'a' command handler elapsed time: 3 seconds
+dismissDialog("Close Hardware Manager"); // bz
+// WARNING: HEventQueue.dispatchEvent() is taking  1085 ms.
+// [GUI Memory]: 177 MB (+7388kb) [53:56:48]
+// WARNING: HEventQueue.dispatchEvent() is taking  51658 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1030 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1656 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6704 ms. Increasing delay to 20112 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1560 ms. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  563196 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 528 ms. Decreasing delay to 2528 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2217 ms.
+// Elapsed time: 1173 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ak
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bz (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1821 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bz
+// bz (cr):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2020.2   **** Build date : Nov 18 2020 at 10:01:48     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 667 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1177 ms to process. Increasing delay to 3000 ms.
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2020.2   ****** Build date   : Nov 04 2020-05:02:56     **** Build number : 2020.2.1604437376       ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2462.516 ; gain = 1.215 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292747840A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 14 seconds
+dismissDialog("Auto Connect"); // bz
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// bz (cr):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 102 MB. Current time: 9/14/22, 7:12:18 PM CST
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292747840A 
+// o (cr): Close Hardware Target: addNotify
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  1090637 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1143 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2164 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1640053046 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4366 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4527 ms. Increasing delay to 13581 ms.
+// Elapsed time: 1641924 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Close Hardware Target"); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 81 MB. Current time: 10/3/22, 7:11:24 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1415 ms.
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ac
+selectMenuItem(PAResourceCommand.PACommandNames_PROJECT_SUMMARY, "Project Summary"); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ac
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SUMMARY
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ac
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 70 ms. Decreasing delay to 2070 ms.
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ac
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+// WARNING: HEventQueue.dispatchEvent() is taking  1641144911 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1213 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1081 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1005 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1128 ms. Increasing delay to 3384 ms.
+// Elapsed time: 1641282 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LogisimToplevelShell (LogisimToplevelShell.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 621ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2367 ms. Increasing delay to 7101 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  84319 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1125 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6381 ms. Increasing delay to 19143 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  82742 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1502 ms. Decreasing delay to 3502 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 87876 ms. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1842 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1095356 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 113 MB. Current time: 10/3/22, 7:49:42 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1797 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1331 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1565 ms.
+// [GUI Memory]: 196 MB (+10784kb) [511:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  401446 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3320 ms. Increasing delay to 9960 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1635 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 112 MB. Current time: 10/3/22, 8:19:41 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2599587 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 112 MB. Current time: 10/3/22, 9:23:47 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1083 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1811 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1368 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1219 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2520 ms. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1939 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 4464 ms. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6028 ms. Increasing delay to 18084 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  589191 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 593869 ms. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 77 ms. Decreasing delay to 2077 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1564 ms. Increasing delay to 4692 ms.
+// Elapsed time: 8526 seconds
+selectCodeEditor("LogisimToplevelShell.v", 338, 382); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 112 MB. Current time: 10/3/22, 9:53:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,370 MB. GUI used memory: 112 MB. Current time: 10/3/22, 10:23:49 PM CST
