@@ -1,0 +1,2 @@
+# verilog_cpu
+verilog cpu相关的代码放在这个文件夹下面
