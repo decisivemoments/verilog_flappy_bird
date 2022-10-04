@@ -108,6 +108,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/base/LogisimClockComponent.v
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/memory/LogisimCounter.v
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/base/LogisimTickGenerator.v
+  C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/plexers/Multiplexer_16.v
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v
   C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v

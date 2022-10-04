@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1664875796">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1664882333">
   <File Type="PA-TCL" Name="LogisimToplevelShell.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="LogisimToplevelShell_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="LogisimToplevelShell_reports.tcl"/>
@@ -138,6 +138,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../verilog/base/LogisimTickGenerator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MULL.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

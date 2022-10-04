@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8872
+INFO: [Synth 8-7075] Helper process launched with PID 3188
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1017.641 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1016.758 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'LogisimToplevelShell' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v:92]
 INFO: [Synth 8-6157] synthesizing module 'LogisimTickGenerator' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/base/LogisimTickGenerator.v:9]
@@ -151,69 +151,72 @@ INFO: [Synth 8-6157] synthesizing module 'OR_GATE_BUS' [C:/Users/honghongyu/veri
 	Parameter BubblesMask bound to: 0 - type: integer 
 	Parameter NrOfBits bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_BUS' (32#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (33#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/ALU.v:9]
+INFO: [Synth 8-6157] synthesizing module 'MULL' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v:23]
+	Parameter NrOfBits bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MULL' (33#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (34#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/ALU.v:9]
 INFO: [Synth 8-6157] synthesizing module 'hardwired_controller' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/hardwired_controller.v:9]
 INFO: [Synth 8-6157] synthesizing module 'arithmetic_controller' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/arithmetic_controller.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_8_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_8_INPUTS' (34#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_8_INPUTS' (35#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_10_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_10_INPUTS' (35#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_10_INPUTS' (36#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_7_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_7_INPUTS' (36#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_7_INPUTS' (37#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_10_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_10_INPUTS' (37#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_10_INPUTS' (38#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_15_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_15_INPUTS' (38#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_15_INPUTS' (39#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_8_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_8_INPUTS' (39#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'arithmetic_controller' (40#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/arithmetic_controller.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_8_INPUTS' (40#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'arithmetic_controller' (41#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/arithmetic_controller.v:9]
 INFO: [Synth 8-6157] synthesizing module 'signal_generator' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/signal_generator.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_5_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_5_INPUTS' (41#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_5_INPUTS' (42#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_7_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_7_INPUTS' (42#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_7_INPUTS' (43#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_9_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_9_INPUTS' (43#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_9_INPUTS' (44#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'AND_GATE_6_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_6_INPUTS' (44#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'AND_GATE_6_INPUTS' (45#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_6_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_6_INPUTS' (45#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_6_INPUTS' (46#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_21_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_21_INPUTS' (46#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_21_INPUTS' (47#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v:9]
 INFO: [Synth 8-6157] synthesizing module 'OR_GATE_11_INPUTS' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v:9]
 	Parameter BubblesMask bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_11_INPUTS' (47#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'signal_generator' (48#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/signal_generator.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'hardwired_controller' (49#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/hardwired_controller.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OR_GATE_11_INPUTS' (48#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'signal_generator' (49#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/signal_generator.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'hardwired_controller' (50#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/hardwired_controller.v:9]
 INFO: [Synth 8-6157] synthesizing module 'regfile1' [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'regfile1' (50#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'single_cycle_riscv' (51#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'LogisimToplevelShell' (52#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'regfile1' (51#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'single_cycle_riscv' (52#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'LogisimToplevelShell' (53#1) [C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v:92]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1017.641 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1016.758 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.641 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1016.758 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.641 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1016.758 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1017.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1016.758 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -224,29 +227,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/LogisimToplevelShell_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1078.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1077.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1078.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1077.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1077.281 ; gain = 60.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1077.281 ; gain = 60.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1077.281 ; gain = 60.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1077.281 ; gain = 60.523
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/GATE_5' (NOT_GATE) to 'single_cycle_riscv_0/GATE_10'
 INFO: [Synth 8-223] decloning instance 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_1' (NOT_GATE) to 'single_cycle_riscv_0/hardwired_controller_1/arithmetic_controller_1/GATE_3'
@@ -368,11 +371,12 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
++---Multipliers : 
+	              32x32  Multipliers := 1     
 +---RAMs : 
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 25    
-	 316 Input   32 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 1     
@@ -397,22 +401,45 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+DSP Report: Generating DSP Muler/Result, operation Mode is: A*B.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: Generating DSP Muler/Result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: Generating DSP Muler/Result, operation Mode is: A*B.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: Generating DSP Muler/Result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
+DSP Report: operator Muler/Result is absorbed into DSP Muler/Result.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1077.281 ; gain = 60.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
-|Module Name                   | RTL Object    | Inference | Size (Depth x Width) | Primitives                    | 
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
-|single_cycle_riscv_0/regfile0 | rf_reg        | Implied   | 32 x 32              | RAM32M x 12	                  | 
-|single_cycle_riscv_0          | RAM_1/mem_reg | Implied   | 1 K x 32             | RAM16X1S x 32	RAM256X1S x 64	 | 
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
++------------------------------+------------+-----------+----------------------+--------------+
+|Module Name                   | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++------------------------------+------------+-----------+----------------------+--------------+
+|single_cycle_riscv_0/regfile0 | rf_reg     | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------------------------+------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -420,25 +447,24 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 1078.426 ; gain = 60.785
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1097.566 ; gain = 80.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1120.645 ; gain = 103.004
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1152.285 ; gain = 135.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
-|Module Name                   | RTL Object    | Inference | Size (Depth x Width) | Primitives                    | 
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
-|single_cycle_riscv_0/regfile0 | rf_reg        | Implied   | 32 x 32              | RAM32M x 12	                  | 
-|single_cycle_riscv_0          | RAM_1/mem_reg | Implied   | 1 K x 32             | RAM16X1S x 32	RAM256X1S x 64	 | 
-+------------------------------+---------------+-----------+----------------------+-------------------------------+
++------------------------------+------------+-----------+----------------------+--------------+
+|Module Name                   | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++------------------------------+------------+-----------+----------------------+--------------+
+|single_cycle_riscv_0/regfile0 | rf_reg     | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------------------------+------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -447,7 +473,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1136.125 ; gain = 118.484
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -465,37 +491,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -508,51 +534,47 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+----------+------+
-|      |Cell      |Count |
-+------+----------+------+
-|1     |BUFG      |     2|
-|2     |CARRY4    |    75|
-|3     |LUT1      |    42|
-|4     |LUT2      |   145|
-|5     |LUT3      |   143|
-|6     |LUT4      |   124|
-|7     |LUT5      |   117|
-|8     |LUT6      |   744|
-|9     |MUXF7     |    55|
-|10    |MUXF8     |     7|
-|11    |RAM16X1S  |    32|
-|12    |RAM256X1S |    64|
-|13    |RAM32M    |    12|
-|14    |FDCE      |    64|
-|15    |FDRE      |    59|
-|16    |FDSE      |    13|
-|17    |IBUF      |     3|
-|18    |OBUF      |    16|
-+------+----------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    48|
+|3     |DSP48E1 |     3|
+|4     |LUT1    |    34|
+|5     |LUT2    |    60|
+|6     |LUT3    |    40|
+|7     |LUT4    |    51|
+|8     |LUT5    |   131|
+|9     |LUT6    |   317|
+|10    |MUXF7   |     4|
+|11    |RAM32M  |    12|
+|12    |FDCE    |    44|
+|13    |FDRE    |    59|
+|14    |FDSE    |    13|
+|15    |IBUF    |     3|
+|16    |OBUF    |    16|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1142.641 ; gain = 64.215
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1142.641 ; gain = 125.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 1162.281 ; gain = 85.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1162.281 ; gain = 145.523
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1155.688 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 245 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1165.094 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1155.688 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1165.094 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 108 instances were transformed.
-  RAM16X1S => RAM32X1S (RAMS32): 32 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 64 instances
+  A total of 12 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-237 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+239 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:06 . Memory (MB): peak = 1155.688 ; gain = 138.047
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1165.094 ; gain = 148.336
 INFO: [Common 17-1381] The checkpoint 'C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/LogisimToplevelShell.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LogisimToplevelShell_utilization_synth.rpt -pb LogisimToplevelShell_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  4 17:31:14 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  4 19:20:04 2022...

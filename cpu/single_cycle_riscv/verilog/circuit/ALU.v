@@ -54,6 +54,7 @@ module ALU( AluOP,
    wire[31:0] s_LOGISIM_BUS_7;
    wire[31:0] s_LOGISIM_BUS_8;
    wire[31:0] s_LOGISIM_BUS_9;
+   wire[31:0] s_LOGISIM_BUS_1000;
    wire s_LOGISIM_NET_13;
    wire s_LOGISIM_NET_15;
    wire s_LOGISIM_NET_20;
@@ -104,7 +105,7 @@ module ALU( AluOP,
              .MuxIn_14(s_LOGISIM_BUS_2[31:0]),
              .MuxIn_15(s_LOGISIM_BUS_2[31:0]),
              .MuxIn_2(s_LOGISIM_BUS_0[31:0]),
-             .MuxIn_3(s_LOGISIM_BUS_25[31:0]),
+             .MuxIn_3(s_LOGISIM_BUS_1000[31:0]),///mulµÄÊä³ö
              .MuxIn_4(s_LOGISIM_BUS_25[31:0]),
              .MuxIn_5(s_LOGISIM_BUS_8[31:0]),
              .MuxIn_6(s_LOGISIM_BUS_9[31:0]),
@@ -228,7 +229,10 @@ module ALU( AluOP,
       GATE_5 (.Input_1(s_LOGISIM_BUS_25[31:0]),
               .Input_2(s_LOGISIM_BUS_24[31:0]),
               .Result(s_LOGISIM_BUS_11[31:0]));
-
+   MULL #(.NrOfBits(32))
+      Muler (.DataA(s_LOGISIM_BUS_25[31:0]),
+             .DataB(s_LOGISIM_BUS_24[31:0]),
+             .Result(s_LOGISIM_BUS_1000[31:0]));
 
 
 endmodule
