@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Sep  7 19:18:47 2022
+| Date         : Tue Oct  4 17:33:20 2022
 | Host         : BCC4 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file LogisimToplevelShell_control_sets_placed.rpt
 | Design       : LogisimToplevelShell
@@ -42,12 +42,12 @@ Table of Contents
 | Total control sets |    11 |
 | >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     0 |
+| >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     9 |
+| >= 16              |     8 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              41 |           14 |
+| No           | No                    | No                     |              10 |            4 |
 | No           | No                    | Yes                    |               1 |            1 |
-| No           | Yes                   | No                     |              31 |            8 |
+| No           | Yes                   | No                     |              62 |           16 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              95 |           42 |
+| Yes          | No                    | Yes                    |              63 |           32 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,17 +73,17 @@ Table of Contents
 +-------------------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
 |                   Clock Signal                  |                       Enable Signal                      |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
 +-------------------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
-|  FPGA_GlobalClock_IBUF_BUFG                     |                                                          | single_cycle_riscv_0/REGISTER_FILE_1/s_LOGISIM_NET_33 |                1 |              1 |         1.00 |
-|  single_cycle_riscv_0/FPGADigit_1/u_divider/CLK |                                                          |                                                       |                2 |              3 |         1.50 |
+|  FPGA_GlobalClock_IBUF_BUFG                     |                                                          | single_cycle_riscv_0/REGISTER_FILE_3/s_LOGISIM_NET_34 |                1 |              1 |         1.00 |
+|  single_cycle_riscv_0/FPGADigit_1/u_divider/CLK |                                                          |                                                       |                1 |              3 |         3.00 |
+|  FPGA_GlobalClock_IBUF_BUFG                     |                                                          |                                                       |                3 |              7 |         2.33 |
 |  FPGA_GlobalClock_IBUF_BUFG                     |                                                          | single_cycle_riscv_0/FPGADigit_1/u_divider/clk_N      |                8 |             31 |         3.88 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | CLOCKGEN_0/E[0]                                          | FPGA_INPUT_PIN_1_IBUF                                 |               17 |             31 |         1.82 |
-|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_3/Result_carry_i_10_0 |                                                       |                8 |             32 |         4.00 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/Comparator_1/E[0]                   | FPGA_INPUT_PIN_1_IBUF                                 |               16 |             32 |         2.00 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/COUNTER_1/s_real_enable             | FPGA_INPUT_PIN_1_IBUF                                 |                9 |             32 |         3.56 |
-|  FPGA_GlobalClock_IBUF_BUFG                     |                                                          |                                                       |               12 |             38 |         3.17 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_3/p_0_in              |                                                       |               12 |             96 |         8.00 |
-|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_3/Result_carry_i_10_1 |                                                       |               32 |            128 |         4.00 |
-|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_3/Result_carry_i_10_2 |                                                       |               32 |            128 |         4.00 |
+|  FPGA_GlobalClock_IBUF_BUFG                     |                                                          | LogisimTickGenerator_0/s_count_reg[31]_i_1_n_0        |                8 |             31 |         3.88 |
+|  FPGA_GlobalClock_IBUF_BUFG                     | CLOCKGEN_0/E[0]                                          | FPGA_INPUT_PIN_1_IBUF                                 |               21 |             31 |         1.48 |
+|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_1/E[0]                | FPGA_INPUT_PIN_1_IBUF                                 |               11 |             32 |         2.91 |
+|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_1/Result_carry_i_10_0 |                                                       |                8 |             32 |         4.00 |
+|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_1/p_0_in              |                                                       |               12 |             96 |         8.00 |
+|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_1/Result_carry_i_10_2 |                                                       |               32 |            128 |         4.00 |
+|  RAM_1/p_0_in                                   | single_cycle_riscv_0/REGISTER_FILE_1/Result_carry_i_10_1 |                                                       |               32 |            128 |         4.00 |
 +-------------------------------------------------+----------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
 
 

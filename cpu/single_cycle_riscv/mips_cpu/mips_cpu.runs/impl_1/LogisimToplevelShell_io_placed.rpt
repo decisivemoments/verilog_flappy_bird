@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date                      : Wed Sep  7 19:18:47 2022
+| Date                      : Tue Oct  4 17:33:20 2022
 | Host                      : BCC4 running 64-bit major release  (build 9200)
 | Command                   : report_io -file LogisimToplevelShell_io_placed.rpt
 | Design                    : LogisimToplevelShell
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            22 |
+|            19 |
 +---------------+
 
 
@@ -245,7 +245,7 @@ Table of Contents
 | M10        |                      |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M11        |                      |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | M12        |                      |            | VCCAUX                       | VCCAUX      |             |         |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |
-| M13        | FPGA_INPUT_PIN_2     | High Range | IO_L6N_T0_D08_VREF_14        | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| M13        |                      | High Range | IO_L6N_T0_D08_VREF_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M14        |                      | High Range | IO_L2N_T0_D03_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M15        |                      |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | M16        |                      | High Range | IO_L10P_T1_D14_14            | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -301,9 +301,9 @@ Table of Contents
 | R12        |                      | High Range | IO_L5P_T0_D06_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R13        |                      | High Range | IO_L5N_T0_D07_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R14        |                      |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| R15        | FPGA_INPUT_PIN_3     | High Range | IO_L13N_T2_MRCC_14           | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| R15        |                      | High Range | IO_L13N_T2_MRCC_14           | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R16        |                      | High Range | IO_L15P_T2_DQS_RDWR_B_14     | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| R17        | FPGA_INPUT_PIN_4     | High Range | IO_L12N_T1_MRCC_14           | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| R17        |                      | High Range | IO_L12N_T1_MRCC_14           | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R18        |                      | High Range | IO_L7P_T1_D09_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T1         |                      | High Range | IO_L17N_T2_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T2         |                      | High Range | VCCO_34                      | VCCO        |             |      34 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |

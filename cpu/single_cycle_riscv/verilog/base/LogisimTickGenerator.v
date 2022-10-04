@@ -7,8 +7,7 @@
 
 `timescale 1ns/1ps
 module LogisimTickGenerator( FPGAClock,
-                             FPGATick,
-                             pinlv);
+                             FPGATick);
 
    /***************************************************************************
     ** Here all module parameters are defined with a dummy value             **
@@ -16,12 +15,12 @@ module LogisimTickGenerator( FPGAClock,
    parameter NrOfBits = 1;
    parameter ReloadValue = 1;
 
-    assign reloadvalue2=pinlv ? 781250 : 3125000;
+
    /***************************************************************************
     ** Here the inputs are defined                                           **
     ***************************************************************************/
    input  FPGAClock;
-   input pinlv;
+
    /***************************************************************************
     ** Here the outputs are defined                                          **
     ***************************************************************************/
@@ -30,7 +29,6 @@ module LogisimTickGenerator( FPGAClock,
    /***************************************************************************
     ** Here the internal wires are defined                                   **
     ***************************************************************************/
-   wire[NrOfBits-1:0] reloadvalue2;
    wire[NrOfBits-1:0] s_count_next;
    wire s_tick_next;
    reg[NrOfBits-1:0] s_count_reg;
@@ -46,7 +44,7 @@ module LogisimTickGenerator( FPGAClock,
     ** Here the update logic is defined                                      **
     ***************************************************************************/
    assign s_tick_next  = (s_count_reg == 0) ? 1'b1 : 1'b0;
-   assign s_count_next = (s_count_reg == 0) ? reloadvalue2-1 : s_count_reg-1;
+   assign s_count_next = (s_count_reg == 0) ? ReloadValue-1 : s_count_reg-1;
 
    /***************************************************************************
     ** Here the simulation only initial is defined                           **

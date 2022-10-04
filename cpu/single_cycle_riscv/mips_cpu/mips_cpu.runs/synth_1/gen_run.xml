@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662549352">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1664875796">
   <File Type="PA-TCL" Name="LogisimToplevelShell.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="LogisimToplevelShell_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="LogisimToplevelShell_reports.tcl"/>
   <File Type="RDS-RDS" Name="LogisimToplevelShell.vds"/>
   <File Type="RDS-UTIL" Name="LogisimToplevelShell_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="LogisimToplevelShell_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="LogisimToplevelShell.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="LogisimToplevelShell_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="LogisimToplevelShell_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../verilog/circuit/ALU.v">
@@ -127,7 +130,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/LogisimCounter.v">
+    <File Path="$PPRDIR/../verilog/memory/LogisimCounter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -204,7 +207,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verilog/gates/OR_GATE_14_INPUTS.v">
+    <File Path="$PPRDIR/../verilog/gates/OR_GATE_15_INPUTS.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog/gates/OR_GATE_21_INPUTS.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -226,6 +236,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../verilog/gates/OR_GATE_7_INPUTS.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog/gates/OR_GATE_8_INPUTS.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -663,7 +680,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

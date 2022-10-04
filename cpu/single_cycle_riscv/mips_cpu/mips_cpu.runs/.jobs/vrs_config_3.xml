@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="impl_1" LaunchDir="C:/Users/honghongyu/verilog/remake/cpu21-riscv/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="write_bitstream" ToStepId="write_bitstream"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>

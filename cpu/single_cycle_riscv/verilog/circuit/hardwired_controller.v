@@ -79,7 +79,7 @@ module hardwired_controller( Funct,
    wire s_LOGISIM_NET_19;
    wire s_LOGISIM_NET_20;
    wire s_LOGISIM_NET_21;
-   wire s_LOGISIM_NET_32;
+   wire s_LOGISIM_NET_22;
    wire s_LOGISIM_NET_35;
    wire s_LOGISIM_NET_36;
    wire s_LOGISIM_NET_38;
@@ -102,26 +102,26 @@ module hardwired_controller( Funct,
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
-   assign rs1_used                           = s_LOGISIM_NET_32;
-   assign RegWrite                           = s_LOGISIM_NET_36;
-   assign LBU                                = s_LOGISIM_NET_38;
-   assign AUIPC                              = s_LOGISIM_NET_42;
+   assign rs1_used                           = s_LOGISIM_NET_19;
+   assign S_type                             = s_LOGISIM_NET_12;
    assign JAL                                = s_LOGISIM_NET_17;
-   assign ALU_SRC                            = s_LOGISIM_NET_21;
-   assign MemToReg                           = s_LOGISIM_NET_46;
+   assign uret                               = s_LOGISIM_NET_39;
+   assign Beq                                = s_LOGISIM_NET_44;
+   assign ecall                              = s_LOGISIM_NET_14;
+   assign MemWrite                           = s_LOGISIM_NET_20;
    assign rs2_used                           = s_LOGISIM_NET_11;
    assign SRA                                = s_LOGISIM_NET_18;
-   assign CSRRCI                             = s_LOGISIM_NET_45;
    assign Jalr                               = s_LOGISIM_NET_35;
-   assign MemWrite                           = s_LOGISIM_NET_19;
-   assign Beq                                = s_LOGISIM_NET_44;
-   assign BLT                                = s_LOGISIM_NET_10;
-   assign ecall                              = s_LOGISIM_NET_14;
+   assign RegWrite                           = s_LOGISIM_NET_36;
+   assign Bne                                = s_LOGISIM_NET_21;
    assign ALU_OP                             = s_LOGISIM_BUS_33[3:0];
-   assign uret                               = s_LOGISIM_NET_39;
-   assign Bne                                = s_LOGISIM_NET_20;
-   assign S_type                             = s_LOGISIM_NET_12;
+   assign MemToReg                           = s_LOGISIM_NET_46;
+   assign ALU_SRC                            = s_LOGISIM_NET_22;
    assign CSRRSI                             = s_LOGISIM_NET_47;
+   assign AUIPC                              = s_LOGISIM_NET_42;
+   assign BLT                                = s_LOGISIM_NET_10;
+   assign CSRRCI                             = s_LOGISIM_NET_45;
+   assign LBU                                = s_LOGISIM_NET_38;
 
    /***************************************************************************
     ** Here all normal components are defined                                **
@@ -156,13 +156,13 @@ module hardwired_controller( Funct,
                                                        .S2(s_LOGISIM_BUS_33[2]),
                                                        .S3(s_LOGISIM_BUS_33[3]));
 
-   signal_generator      signal_generator_1 (.ALU_SRC(s_LOGISIM_NET_21),
+   signal_generator      signal_generator_1 (.ALU_SRC(s_LOGISIM_NET_22),
                                              .AUIPC(s_LOGISIM_NET_42),
                                              .BEQ(s_LOGISIM_NET_44),
                                              .BLT(s_LOGISIM_NET_10),
-                                             .BNE(s_LOGISIM_NET_20),
-                                             .CSRRCI(s_LOGISIM_NET_45),
-                                             .CSRRSI(s_LOGISIM_NET_47),
+                                             .BNE(s_LOGISIM_NET_21),
+                                             .CSRRCI(),
+                                             .CSRRSI(),
                                              .F12(s_LOGISIM_BUS_34[0]),
                                              .F13(s_LOGISIM_BUS_34[1]),
                                              .F14(s_LOGISIM_BUS_34[2]),
@@ -173,7 +173,7 @@ module hardwired_controller( Funct,
                                              .LBU(s_LOGISIM_NET_38),
                                              .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
                                              .MemToReg(s_LOGISIM_NET_46),
-                                             .MemWrite(s_LOGISIM_NET_19),
+                                             .MemWrite(s_LOGISIM_NET_20),
                                              .OP2(s_LOGISIM_BUS_37[0]),
                                              .OP3(s_LOGISIM_BUS_37[1]),
                                              .OP4(s_LOGISIM_BUS_37[2]),
@@ -183,7 +183,7 @@ module hardwired_controller( Funct,
                                              .SRA(s_LOGISIM_NET_18),
                                              .S_Type(s_LOGISIM_NET_12),
                                              .ecall(s_LOGISIM_NET_13),
-                                             .r1_used(s_LOGISIM_NET_32),
+                                             .r1_used(s_LOGISIM_NET_19),
                                              .r2_used(s_LOGISIM_NET_11));
 
 

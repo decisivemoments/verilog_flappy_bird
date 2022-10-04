@@ -10,9 +10,7 @@ module single_cycle_riscv( GO,
                            LOGISIM_CLOCK_TREE_0,
                            RST,
                            NA,
-                           SEG,
-                           PC,
-                           timer);
+                           SEG);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -20,78 +18,83 @@ module single_cycle_riscv( GO,
    input  GO;
    input[4:0]  LOGISIM_CLOCK_TREE_0;
    input  RST;
-   input  PC;
-   input timer;
+
    /***************************************************************************
     ** Here the outputs are defined                                          **
     ***************************************************************************/
    output[7:0] NA;
    output[7:0] SEG;
+
    /***************************************************************************
     ** Here the internal wires are defined                                   **
     ***************************************************************************/
    wire[3:0] s_LOGISIM_BUS_0;
    wire[11:0] s_LOGISIM_BUS_1;
-   wire[31:0] s_LOGISIM_BUS_100;
-   wire[19:0] s_LOGISIM_BUS_101;
-   wire[31:0] s_LOGISIM_BUS_106;
-   wire[4:0] s_LOGISIM_BUS_107;
-   wire[4:0] s_LOGISIM_BUS_108;
-   wire[31:0] s_LOGISIM_BUS_109;
-   wire[2:0] s_LOGISIM_BUS_110;
-   wire[4:0] s_LOGISIM_BUS_113;
-   wire[3:0] s_LOGISIM_BUS_114;
-   wire[5:0] s_LOGISIM_BUS_115;
-   wire[6:0] s_LOGISIM_BUS_117;
+   wire[31:0] s_LOGISIM_BUS_102;
+   wire[31:0] s_LOGISIM_BUS_103;
+   wire[4:0] s_LOGISIM_BUS_106;
+   wire[31:0] s_LOGISIM_BUS_107;
+   wire[19:0] s_LOGISIM_BUS_108;
+   wire[31:0] s_LOGISIM_BUS_113;
+   wire[4:0] s_LOGISIM_BUS_114;
+   wire[4:0] s_LOGISIM_BUS_115;
+   wire[31:0] s_LOGISIM_BUS_116;
+   wire[2:0] s_LOGISIM_BUS_118;
+   wire[4:0] s_LOGISIM_BUS_122;
+   wire[6:0] s_LOGISIM_BUS_123;
+   wire[5:0] s_LOGISIM_BUS_124;
+   wire[3:0] s_LOGISIM_BUS_125;
    wire[31:0] s_LOGISIM_BUS_2;
    wire[31:0] s_LOGISIM_BUS_3;
-   wire[31:0] s_LOGISIM_BUS_32;
-//   wire[7:0] s_LOGISIM_BUS_34;
-   wire[11:0] s_LOGISIM_BUS_35;
-   wire[4:0] s_LOGISIM_BUS_36;
-   wire[31:0] s_LOGISIM_BUS_37;
-   wire[31:0] s_LOGISIM_BUS_38;
+   wire[31:0] s_LOGISIM_BUS_33;
+   wire[11:0] s_LOGISIM_BUS_36;
+   wire[4:0] s_LOGISIM_BUS_38;
+   wire[31:0] s_LOGISIM_BUS_39;
    wire[31:0] s_LOGISIM_BUS_4;
-   wire[4:0] s_LOGISIM_BUS_45;
-   wire[31:0] s_LOGISIM_BUS_46;
-   wire[31:0] s_LOGISIM_BUS_48;
+   wire[31:0] s_LOGISIM_BUS_40;
+   wire[4:0] s_LOGISIM_BUS_48;
+   wire[31:0] s_LOGISIM_BUS_49;
    wire[31:0] s_LOGISIM_BUS_5;
-   wire[31:0] s_LOGISIM_BUS_50;
-   wire[31:0] s_LOGISIM_BUS_53;
-   wire[7:0] s_LOGISIM_BUS_55;
-   wire[4:0] s_LOGISIM_BUS_56;
+   wire[31:0] s_LOGISIM_BUS_51;
+   wire[31:0] s_LOGISIM_BUS_54;
    wire[31:0] s_LOGISIM_BUS_57;
-   wire[31:0] s_LOGISIM_BUS_59;
+   wire[7:0] s_LOGISIM_BUS_59;
    wire[31:0] s_LOGISIM_BUS_6;
-   wire[31:0] s_LOGISIM_BUS_60;
+   wire[4:0] s_LOGISIM_BUS_60;
    wire[31:0] s_LOGISIM_BUS_61;
+   wire[31:0] s_LOGISIM_BUS_63;
+   wire[15:0] s_LOGISIM_BUS_64;
    wire[31:0] s_LOGISIM_BUS_65;
-   wire[11:0] s_LOGISIM_BUS_66;
-   wire[7:0] s_LOGISIM_BUS_69;
-   wire[31:0] s_LOGISIM_BUS_73;
-   wire[31:0] s_LOGISIM_BUS_74;
-   wire[9:0] s_LOGISIM_BUS_75;
-   wire[31:0] s_LOGISIM_BUS_76;
-   wire[31:0] s_LOGISIM_BUS_77;
+   wire[31:0] s_LOGISIM_BUS_66;
+   wire[31:0] s_LOGISIM_BUS_70;
+   wire[11:0] s_LOGISIM_BUS_71;
+   wire[7:0] s_LOGISIM_BUS_74;
+   wire[31:0] s_LOGISIM_BUS_78;
+   wire[31:0] s_LOGISIM_BUS_79;
    wire[7:0] s_LOGISIM_BUS_8;
-   wire[31:0] s_LOGISIM_BUS_80;
-   wire[31:0] s_LOGISIM_BUS_83;
-   wire[4:0] s_LOGISIM_BUS_84;
-   wire[19:0] s_LOGISIM_BUS_86;
-   wire[31:0] s_LOGISIM_BUS_87;
-   wire[31:0] s_LOGISIM_BUS_89;
-   wire[7:0] s_LOGISIM_BUS_91;
+   wire[9:0] s_LOGISIM_BUS_80;
+   wire[31:0] s_LOGISIM_BUS_81;
+   wire[31:0] s_LOGISIM_BUS_82;
+   wire[31:0] s_LOGISIM_BUS_85;
+   wire[31:0] s_LOGISIM_BUS_88;
+   wire[4:0] s_LOGISIM_BUS_89;
+   wire[19:0] s_LOGISIM_BUS_91;
+   wire[31:0] s_LOGISIM_BUS_92;
    wire[31:0] s_LOGISIM_BUS_95;
-   wire[31:0] s_LOGISIM_BUS_96;
-   wire[4:0] s_LOGISIM_BUS_99;
+   wire[15:0] s_LOGISIM_BUS_96;
+   wire[7:0] s_LOGISIM_BUS_98;
    wire s_LOGISIM_NET_10;
-   wire s_LOGISIM_NET_102;
-   wire s_LOGISIM_NET_103;
+   wire s_LOGISIM_NET_100;
+   wire s_LOGISIM_NET_101;
    wire s_LOGISIM_NET_104;
+   wire s_LOGISIM_NET_105;
+   wire s_LOGISIM_NET_109;
    wire s_LOGISIM_NET_11;
+   wire s_LOGISIM_NET_110;
    wire s_LOGISIM_NET_111;
-   wire s_LOGISIM_NET_118;
+   wire s_LOGISIM_NET_119;
    wire s_LOGISIM_NET_12;
+   wire s_LOGISIM_NET_121;
    wire s_LOGISIM_NET_13;
    wire s_LOGISIM_NET_15;
    wire s_LOGISIM_NET_16;
@@ -108,593 +111,578 @@ module single_cycle_riscv( GO,
    wire s_LOGISIM_NET_29;
    wire s_LOGISIM_NET_30;
    wire s_LOGISIM_NET_31;
-   wire s_LOGISIM_NET_33;
-   wire s_LOGISIM_NET_41;
-   wire s_LOGISIM_NET_42;
+   wire s_LOGISIM_NET_32;
+   wire s_LOGISIM_NET_34;
+   wire s_LOGISIM_NET_37;
    wire s_LOGISIM_NET_43;
-   wire s_LOGISIM_NET_47;
-   wire s_LOGISIM_NET_51;
+   wire s_LOGISIM_NET_44;
+   wire s_LOGISIM_NET_45;
+   wire s_LOGISIM_NET_46;
+   wire s_LOGISIM_NET_50;
    wire s_LOGISIM_NET_52;
-   wire s_LOGISIM_NET_58;
+   wire s_LOGISIM_NET_55;
+   wire s_LOGISIM_NET_56;
    wire s_LOGISIM_NET_62;
-   wire s_LOGISIM_NET_63;
    wire s_LOGISIM_NET_67;
    wire s_LOGISIM_NET_68;
    wire s_LOGISIM_NET_7;
-   wire s_LOGISIM_NET_70;
-   wire s_LOGISIM_NET_71;
    wire s_LOGISIM_NET_72;
-   wire s_LOGISIM_NET_78;
-   wire s_LOGISIM_NET_79;
-   wire s_LOGISIM_NET_81;
-   wire s_LOGISIM_NET_82;
-   wire s_LOGISIM_NET_85;
-   wire s_LOGISIM_NET_88;
+   wire s_LOGISIM_NET_73;
+   wire s_LOGISIM_NET_75;
+   wire s_LOGISIM_NET_76;
+   wire s_LOGISIM_NET_77;
+   wire s_LOGISIM_NET_83;
+   wire s_LOGISIM_NET_84;
+   wire s_LOGISIM_NET_86;
+   wire s_LOGISIM_NET_87;
    wire s_LOGISIM_NET_90;
-   wire s_LOGISIM_NET_92;
-   wire s_LOGISIM_NET_93;
    wire s_LOGISIM_NET_94;
    wire s_LOGISIM_NET_97;
-   wire s_LOGISIM_NET_98;
-   wire [31:0]digin;
-   
-   wire [31:0]s_LOGISIM_BUS_64;
-   wire [31:0]s_LOGISIM_BUS_67;
+   wire s_LOGISIM_NET_99;
+
+
    /***************************************************************************
     ** Here all clock generator connections are defined                      **
     ***************************************************************************/
-//   assign s_LOGISIM_NET_103                  = LOGISIM_CLOCK_TREE_0[0];
+//   assign s_LOGISIM_NET_110                  = LOGISIM_CLOCK_TREE_0[0];
 
    /***************************************************************************
     ** Here all wiring is defined                                            **
     ***************************************************************************/
    assign s_LOGISIM_NET_13                   = s_LOGISIM_BUS_2[20];
-   assign s_LOGISIM_BUS_101[10]              = s_LOGISIM_NET_13;
-//   assign s_LOGISIM_BUS_34[0]                = s_LOGISIM_BUS_53[16];
-//   assign s_LOGISIM_BUS_34[0]                = s_LOGISIM_BUS_53[24];
-//   assign s_LOGISIM_BUS_34[1]                = s_LOGISIM_BUS_53[17];
-//   assign s_LOGISIM_BUS_34[1]                = s_LOGISIM_BUS_53[25];
-//   assign s_LOGISIM_BUS_34[2]                = s_LOGISIM_BUS_53[18];
-//   assign s_LOGISIM_BUS_34[2]                = s_LOGISIM_BUS_53[26];
-//   assign s_LOGISIM_BUS_34[3]                = s_LOGISIM_BUS_53[19];
-//   assign s_LOGISIM_BUS_34[3]                = s_LOGISIM_BUS_53[27];
-//   assign s_LOGISIM_BUS_34[4]                = s_LOGISIM_BUS_53[20];
-//   assign s_LOGISIM_BUS_34[4]                = s_LOGISIM_BUS_53[28];
-//   assign s_LOGISIM_BUS_34[5]                = s_LOGISIM_BUS_53[21];
-//   assign s_LOGISIM_BUS_34[5]                = s_LOGISIM_BUS_53[29];
-//   assign s_LOGISIM_BUS_34[6]                = s_LOGISIM_BUS_53[22];
-//   assign s_LOGISIM_BUS_34[6]                = s_LOGISIM_BUS_53[30];
-//   assign s_LOGISIM_BUS_34[7]                = s_LOGISIM_BUS_53[23];
-//   assign s_LOGISIM_BUS_34[7]                = s_LOGISIM_BUS_53[31];
-   assign s_LOGISIM_NET_41                   = s_LOGISIM_BUS_2[31];
-   assign s_LOGISIM_BUS_1[11]                = s_LOGISIM_NET_41;
-   assign s_LOGISIM_BUS_55[0]                = s_LOGISIM_BUS_2[12];
-   assign s_LOGISIM_BUS_101[11]              = s_LOGISIM_BUS_55[0];
-   assign s_LOGISIM_BUS_55[1]                = s_LOGISIM_BUS_2[13];
-   assign s_LOGISIM_BUS_101[12]              = s_LOGISIM_BUS_55[1];
-   assign s_LOGISIM_BUS_55[2]                = s_LOGISIM_BUS_2[14];
-   assign s_LOGISIM_BUS_101[13]              = s_LOGISIM_BUS_55[2];
-   assign s_LOGISIM_BUS_55[3]                = s_LOGISIM_BUS_2[15];
-   assign s_LOGISIM_BUS_101[14]              = s_LOGISIM_BUS_55[3];
-   assign s_LOGISIM_BUS_55[4]                = s_LOGISIM_BUS_2[16];
-   assign s_LOGISIM_BUS_101[15]              = s_LOGISIM_BUS_55[4];
-   assign s_LOGISIM_BUS_55[5]                = s_LOGISIM_BUS_2[17];
-   assign s_LOGISIM_BUS_101[16]              = s_LOGISIM_BUS_55[5];
-   assign s_LOGISIM_BUS_55[6]                = s_LOGISIM_BUS_2[18];
-   assign s_LOGISIM_BUS_101[17]              = s_LOGISIM_BUS_55[6];
-   assign s_LOGISIM_BUS_55[7]                = s_LOGISIM_BUS_2[19];
-   assign s_LOGISIM_BUS_101[18]              = s_LOGISIM_BUS_55[7];
-   assign s_LOGISIM_BUS_75[0]                = s_LOGISIM_BUS_2[21];
-   assign s_LOGISIM_BUS_101[0]               = s_LOGISIM_BUS_75[0];
-   assign s_LOGISIM_BUS_75[1]                = s_LOGISIM_BUS_2[22];
-   assign s_LOGISIM_BUS_101[1]               = s_LOGISIM_BUS_75[1];
-   assign s_LOGISIM_BUS_75[2]                = s_LOGISIM_BUS_2[23];
-   assign s_LOGISIM_BUS_101[2]               = s_LOGISIM_BUS_75[2];
-   assign s_LOGISIM_BUS_75[3]                = s_LOGISIM_BUS_2[24];
-   assign s_LOGISIM_BUS_101[3]               = s_LOGISIM_BUS_75[3];
-   assign s_LOGISIM_BUS_75[4]                = s_LOGISIM_BUS_2[25];
-   assign s_LOGISIM_BUS_101[4]               = s_LOGISIM_BUS_75[4];
-   assign s_LOGISIM_BUS_75[5]                = s_LOGISIM_BUS_2[26];
-   assign s_LOGISIM_BUS_101[5]               = s_LOGISIM_BUS_75[5];
-   assign s_LOGISIM_BUS_75[6]                = s_LOGISIM_BUS_2[27];
-   assign s_LOGISIM_BUS_101[6]               = s_LOGISIM_BUS_75[6];
-   assign s_LOGISIM_BUS_75[7]                = s_LOGISIM_BUS_2[28];
-   assign s_LOGISIM_BUS_101[7]               = s_LOGISIM_BUS_75[7];
-   assign s_LOGISIM_BUS_75[8]                = s_LOGISIM_BUS_2[29];
-   assign s_LOGISIM_BUS_101[8]               = s_LOGISIM_BUS_75[8];
-   assign s_LOGISIM_BUS_75[9]                = s_LOGISIM_BUS_2[30];
-   assign s_LOGISIM_BUS_101[9]               = s_LOGISIM_BUS_75[9];
-   assign s_LOGISIM_NET_85                   = s_LOGISIM_BUS_2[31];
-   assign s_LOGISIM_BUS_101[19]              = s_LOGISIM_NET_85;
-   assign s_LOGISIM_BUS_86[0]                = s_LOGISIM_BUS_2[12];
-   assign s_LOGISIM_BUS_73[12]               = s_LOGISIM_BUS_86[0];
-   assign s_LOGISIM_BUS_86[1]                = s_LOGISIM_BUS_2[13];
-   assign s_LOGISIM_BUS_73[13]               = s_LOGISIM_BUS_86[1];
-   assign s_LOGISIM_BUS_86[2]                = s_LOGISIM_BUS_2[14];
-   assign s_LOGISIM_BUS_73[14]               = s_LOGISIM_BUS_86[2];
-   assign s_LOGISIM_BUS_86[3]                = s_LOGISIM_BUS_2[15];
-   assign s_LOGISIM_BUS_73[15]               = s_LOGISIM_BUS_86[3];
-   assign s_LOGISIM_BUS_86[4]                = s_LOGISIM_BUS_2[16];
-   assign s_LOGISIM_BUS_73[16]               = s_LOGISIM_BUS_86[4];
-   assign s_LOGISIM_BUS_86[5]                = s_LOGISIM_BUS_2[17];
-   assign s_LOGISIM_BUS_73[17]               = s_LOGISIM_BUS_86[5];
-   assign s_LOGISIM_BUS_86[6]                = s_LOGISIM_BUS_2[18];
-   assign s_LOGISIM_BUS_73[18]               = s_LOGISIM_BUS_86[6];
-   assign s_LOGISIM_BUS_86[7]                = s_LOGISIM_BUS_2[19];
-   assign s_LOGISIM_BUS_73[19]               = s_LOGISIM_BUS_86[7];
-   assign s_LOGISIM_BUS_86[8]                = s_LOGISIM_BUS_2[20];
-   assign s_LOGISIM_BUS_73[20]               = s_LOGISIM_BUS_86[8];
-   assign s_LOGISIM_BUS_86[9]                = s_LOGISIM_BUS_2[21];
-   assign s_LOGISIM_BUS_73[21]               = s_LOGISIM_BUS_86[9];
-   assign s_LOGISIM_BUS_86[10]               = s_LOGISIM_BUS_2[22];
-   assign s_LOGISIM_BUS_73[22]               = s_LOGISIM_BUS_86[10];
-   assign s_LOGISIM_BUS_86[11]               = s_LOGISIM_BUS_2[23];
-   assign s_LOGISIM_BUS_73[23]               = s_LOGISIM_BUS_86[11];
-   assign s_LOGISIM_BUS_86[12]               = s_LOGISIM_BUS_2[24];
-   assign s_LOGISIM_BUS_73[24]               = s_LOGISIM_BUS_86[12];
-   assign s_LOGISIM_BUS_86[13]               = s_LOGISIM_BUS_2[25];
-   assign s_LOGISIM_BUS_73[25]               = s_LOGISIM_BUS_86[13];
-   assign s_LOGISIM_BUS_86[14]               = s_LOGISIM_BUS_2[26];
-   assign s_LOGISIM_BUS_73[26]               = s_LOGISIM_BUS_86[14];
-   assign s_LOGISIM_BUS_86[15]               = s_LOGISIM_BUS_2[27];
-   assign s_LOGISIM_BUS_73[27]               = s_LOGISIM_BUS_86[15];
-   assign s_LOGISIM_BUS_86[16]               = s_LOGISIM_BUS_2[28];
-   assign s_LOGISIM_BUS_73[28]               = s_LOGISIM_BUS_86[16];
-   assign s_LOGISIM_BUS_86[17]               = s_LOGISIM_BUS_2[29];
-   assign s_LOGISIM_BUS_73[29]               = s_LOGISIM_BUS_86[17];
-   assign s_LOGISIM_BUS_86[18]               = s_LOGISIM_BUS_2[30];
-   assign s_LOGISIM_BUS_73[30]               = s_LOGISIM_BUS_86[18];
-   assign s_LOGISIM_BUS_86[19]               = s_LOGISIM_BUS_2[31];
-   assign s_LOGISIM_BUS_73[31]               = s_LOGISIM_BUS_86[19];
-   assign s_LOGISIM_NET_92                   = s_LOGISIM_BUS_2[7];
-   assign s_LOGISIM_BUS_1[10]                = s_LOGISIM_NET_92;
-   assign s_LOGISIM_BUS_110[0]               = s_LOGISIM_BUS_2[12];
-   assign s_LOGISIM_BUS_36[0]                = s_LOGISIM_BUS_110[0];
-   assign s_LOGISIM_BUS_110[1]               = s_LOGISIM_BUS_2[13];
-   assign s_LOGISIM_BUS_36[1]                = s_LOGISIM_BUS_110[1];
-   assign s_LOGISIM_BUS_110[2]               = s_LOGISIM_BUS_2[14];
-   assign s_LOGISIM_BUS_36[2]                = s_LOGISIM_BUS_110[2];
-   assign s_LOGISIM_NET_111                  = s_LOGISIM_BUS_2[30];
-   assign s_LOGISIM_BUS_36[4]                = s_LOGISIM_NET_111;
-   assign s_LOGISIM_BUS_113[0]               = s_LOGISIM_BUS_2[7];
-   assign s_LOGISIM_BUS_66[0]                = s_LOGISIM_BUS_113[0];
-   assign s_LOGISIM_BUS_113[1]               = s_LOGISIM_BUS_2[8];
-   assign s_LOGISIM_BUS_66[1]                = s_LOGISIM_BUS_113[1];
-   assign s_LOGISIM_BUS_113[2]               = s_LOGISIM_BUS_2[9];
-   assign s_LOGISIM_BUS_66[2]                = s_LOGISIM_BUS_113[2];
-   assign s_LOGISIM_BUS_113[3]               = s_LOGISIM_BUS_2[10];
-   assign s_LOGISIM_BUS_66[3]                = s_LOGISIM_BUS_113[3];
-   assign s_LOGISIM_BUS_113[4]               = s_LOGISIM_BUS_2[11];
-   assign s_LOGISIM_BUS_66[4]                = s_LOGISIM_BUS_113[4];
-   assign s_LOGISIM_BUS_114[0]               = s_LOGISIM_BUS_2[8];
-   assign s_LOGISIM_BUS_1[0]                 = s_LOGISIM_BUS_114[0];
-   assign s_LOGISIM_BUS_114[1]               = s_LOGISIM_BUS_2[9];
-   assign s_LOGISIM_BUS_1[1]                 = s_LOGISIM_BUS_114[1];
-   assign s_LOGISIM_BUS_114[2]               = s_LOGISIM_BUS_2[10];
-   assign s_LOGISIM_BUS_1[2]                 = s_LOGISIM_BUS_114[2];
-   assign s_LOGISIM_BUS_114[3]               = s_LOGISIM_BUS_2[11];
-   assign s_LOGISIM_BUS_1[3]                 = s_LOGISIM_BUS_114[3];
-   assign s_LOGISIM_BUS_115[0]               = s_LOGISIM_BUS_2[25];
-   assign s_LOGISIM_BUS_1[4]                 = s_LOGISIM_BUS_115[0];
-   assign s_LOGISIM_BUS_115[1]               = s_LOGISIM_BUS_2[26];
-   assign s_LOGISIM_BUS_1[5]                 = s_LOGISIM_BUS_115[1];
-   assign s_LOGISIM_BUS_115[2]               = s_LOGISIM_BUS_2[27];
-   assign s_LOGISIM_BUS_1[6]                 = s_LOGISIM_BUS_115[2];
-   assign s_LOGISIM_BUS_115[3]               = s_LOGISIM_BUS_2[28];
-   assign s_LOGISIM_BUS_1[7]                 = s_LOGISIM_BUS_115[3];
-   assign s_LOGISIM_BUS_115[4]               = s_LOGISIM_BUS_2[29];
-   assign s_LOGISIM_BUS_1[8]                 = s_LOGISIM_BUS_115[4];
-   assign s_LOGISIM_BUS_115[5]               = s_LOGISIM_BUS_2[30];
-   assign s_LOGISIM_BUS_1[9]                 = s_LOGISIM_BUS_115[5];
-   assign s_LOGISIM_BUS_117[0]               = s_LOGISIM_BUS_2[25];
-   assign s_LOGISIM_BUS_66[5]                = s_LOGISIM_BUS_117[0];
-   assign s_LOGISIM_BUS_117[1]               = s_LOGISIM_BUS_2[26];
-   assign s_LOGISIM_BUS_66[6]                = s_LOGISIM_BUS_117[1];
-   assign s_LOGISIM_BUS_117[2]               = s_LOGISIM_BUS_2[27];
-   assign s_LOGISIM_BUS_66[7]                = s_LOGISIM_BUS_117[2];
-   assign s_LOGISIM_BUS_117[3]               = s_LOGISIM_BUS_2[28];
-   assign s_LOGISIM_BUS_66[8]                = s_LOGISIM_BUS_117[3];
-   assign s_LOGISIM_BUS_117[4]               = s_LOGISIM_BUS_2[29];
-   assign s_LOGISIM_BUS_66[9]                = s_LOGISIM_BUS_117[4];
-   assign s_LOGISIM_BUS_117[5]               = s_LOGISIM_BUS_2[30];
-   assign s_LOGISIM_BUS_66[10]               = s_LOGISIM_BUS_117[5];
-   assign s_LOGISIM_BUS_117[6]               = s_LOGISIM_BUS_2[31];
-   assign s_LOGISIM_BUS_66[11]               = s_LOGISIM_BUS_117[6];
-   assign s_LOGISIM_NET_118                  = s_LOGISIM_BUS_2[25];
-   assign s_LOGISIM_BUS_36[3]                = s_LOGISIM_NET_118;
+   assign s_LOGISIM_BUS_108[10]              = s_LOGISIM_NET_13;
+   assign s_LOGISIM_NET_43                   = s_LOGISIM_BUS_2[31];
+   assign s_LOGISIM_BUS_1[11]                = s_LOGISIM_NET_43;
+   assign s_LOGISIM_BUS_59[0]                = s_LOGISIM_BUS_2[12];
+   assign s_LOGISIM_BUS_108[11]              = s_LOGISIM_BUS_59[0];
+   assign s_LOGISIM_BUS_59[1]                = s_LOGISIM_BUS_2[13];
+   assign s_LOGISIM_BUS_108[12]              = s_LOGISIM_BUS_59[1];
+   assign s_LOGISIM_BUS_59[2]                = s_LOGISIM_BUS_2[14];
+   assign s_LOGISIM_BUS_108[13]              = s_LOGISIM_BUS_59[2];
+   assign s_LOGISIM_BUS_59[3]                = s_LOGISIM_BUS_2[15];
+   assign s_LOGISIM_BUS_108[14]              = s_LOGISIM_BUS_59[3];
+   assign s_LOGISIM_BUS_59[4]                = s_LOGISIM_BUS_2[16];
+   assign s_LOGISIM_BUS_108[15]              = s_LOGISIM_BUS_59[4];
+   assign s_LOGISIM_BUS_59[5]                = s_LOGISIM_BUS_2[17];
+   assign s_LOGISIM_BUS_108[16]              = s_LOGISIM_BUS_59[5];
+   assign s_LOGISIM_BUS_59[6]                = s_LOGISIM_BUS_2[18];
+   assign s_LOGISIM_BUS_108[17]              = s_LOGISIM_BUS_59[6];
+   assign s_LOGISIM_BUS_59[7]                = s_LOGISIM_BUS_2[19];
+   assign s_LOGISIM_BUS_108[18]              = s_LOGISIM_BUS_59[7];
+   assign s_LOGISIM_BUS_80[0]                = s_LOGISIM_BUS_2[21];
+   assign s_LOGISIM_BUS_108[0]               = s_LOGISIM_BUS_80[0];
+   assign s_LOGISIM_BUS_80[1]                = s_LOGISIM_BUS_2[22];
+   assign s_LOGISIM_BUS_108[1]               = s_LOGISIM_BUS_80[1];
+   assign s_LOGISIM_BUS_80[2]                = s_LOGISIM_BUS_2[23];
+   assign s_LOGISIM_BUS_108[2]               = s_LOGISIM_BUS_80[2];
+   assign s_LOGISIM_BUS_80[3]                = s_LOGISIM_BUS_2[24];
+   assign s_LOGISIM_BUS_108[3]               = s_LOGISIM_BUS_80[3];
+   assign s_LOGISIM_BUS_80[4]                = s_LOGISIM_BUS_2[25];
+   assign s_LOGISIM_BUS_108[4]               = s_LOGISIM_BUS_80[4];
+   assign s_LOGISIM_BUS_80[5]                = s_LOGISIM_BUS_2[26];
+   assign s_LOGISIM_BUS_108[5]               = s_LOGISIM_BUS_80[5];
+   assign s_LOGISIM_BUS_80[6]                = s_LOGISIM_BUS_2[27];
+   assign s_LOGISIM_BUS_108[6]               = s_LOGISIM_BUS_80[6];
+   assign s_LOGISIM_BUS_80[7]                = s_LOGISIM_BUS_2[28];
+   assign s_LOGISIM_BUS_108[7]               = s_LOGISIM_BUS_80[7];
+   assign s_LOGISIM_BUS_80[8]                = s_LOGISIM_BUS_2[29];
+   assign s_LOGISIM_BUS_108[8]               = s_LOGISIM_BUS_80[8];
+   assign s_LOGISIM_BUS_80[9]                = s_LOGISIM_BUS_2[30];
+   assign s_LOGISIM_BUS_108[9]               = s_LOGISIM_BUS_80[9];
+   assign s_LOGISIM_NET_90                   = s_LOGISIM_BUS_2[31];
+   assign s_LOGISIM_BUS_108[19]              = s_LOGISIM_NET_90;
+   assign s_LOGISIM_BUS_91[0]                = s_LOGISIM_BUS_2[12];
+   assign s_LOGISIM_BUS_78[12]               = s_LOGISIM_BUS_91[0];
+   assign s_LOGISIM_BUS_91[1]                = s_LOGISIM_BUS_2[13];
+   assign s_LOGISIM_BUS_78[13]               = s_LOGISIM_BUS_91[1];
+   assign s_LOGISIM_BUS_91[2]                = s_LOGISIM_BUS_2[14];
+   assign s_LOGISIM_BUS_78[14]               = s_LOGISIM_BUS_91[2];
+   assign s_LOGISIM_BUS_91[3]                = s_LOGISIM_BUS_2[15];
+   assign s_LOGISIM_BUS_78[15]               = s_LOGISIM_BUS_91[3];
+   assign s_LOGISIM_BUS_91[4]                = s_LOGISIM_BUS_2[16];
+   assign s_LOGISIM_BUS_78[16]               = s_LOGISIM_BUS_91[4];
+   assign s_LOGISIM_BUS_91[5]                = s_LOGISIM_BUS_2[17];
+   assign s_LOGISIM_BUS_78[17]               = s_LOGISIM_BUS_91[5];
+   assign s_LOGISIM_BUS_91[6]                = s_LOGISIM_BUS_2[18];
+   assign s_LOGISIM_BUS_78[18]               = s_LOGISIM_BUS_91[6];
+   assign s_LOGISIM_BUS_91[7]                = s_LOGISIM_BUS_2[19];
+   assign s_LOGISIM_BUS_78[19]               = s_LOGISIM_BUS_91[7];
+   assign s_LOGISIM_BUS_91[8]                = s_LOGISIM_BUS_2[20];
+   assign s_LOGISIM_BUS_78[20]               = s_LOGISIM_BUS_91[8];
+   assign s_LOGISIM_BUS_91[9]                = s_LOGISIM_BUS_2[21];
+   assign s_LOGISIM_BUS_78[21]               = s_LOGISIM_BUS_91[9];
+   assign s_LOGISIM_BUS_91[10]               = s_LOGISIM_BUS_2[22];
+   assign s_LOGISIM_BUS_78[22]               = s_LOGISIM_BUS_91[10];
+   assign s_LOGISIM_BUS_91[11]               = s_LOGISIM_BUS_2[23];
+   assign s_LOGISIM_BUS_78[23]               = s_LOGISIM_BUS_91[11];
+   assign s_LOGISIM_BUS_91[12]               = s_LOGISIM_BUS_2[24];
+   assign s_LOGISIM_BUS_78[24]               = s_LOGISIM_BUS_91[12];
+   assign s_LOGISIM_BUS_91[13]               = s_LOGISIM_BUS_2[25];
+   assign s_LOGISIM_BUS_78[25]               = s_LOGISIM_BUS_91[13];
+   assign s_LOGISIM_BUS_91[14]               = s_LOGISIM_BUS_2[26];
+   assign s_LOGISIM_BUS_78[26]               = s_LOGISIM_BUS_91[14];
+   assign s_LOGISIM_BUS_91[15]               = s_LOGISIM_BUS_2[27];
+   assign s_LOGISIM_BUS_78[27]               = s_LOGISIM_BUS_91[15];
+   assign s_LOGISIM_BUS_91[16]               = s_LOGISIM_BUS_2[28];
+   assign s_LOGISIM_BUS_78[28]               = s_LOGISIM_BUS_91[16];
+   assign s_LOGISIM_BUS_91[17]               = s_LOGISIM_BUS_2[29];
+   assign s_LOGISIM_BUS_78[29]               = s_LOGISIM_BUS_91[17];
+   assign s_LOGISIM_BUS_91[18]               = s_LOGISIM_BUS_2[30];
+   assign s_LOGISIM_BUS_78[30]               = s_LOGISIM_BUS_91[18];
+   assign s_LOGISIM_BUS_91[19]               = s_LOGISIM_BUS_2[31];
+   assign s_LOGISIM_BUS_78[31]               = s_LOGISIM_BUS_91[19];
+   assign s_LOGISIM_NET_99                   = s_LOGISIM_BUS_2[7];
+   assign s_LOGISIM_BUS_1[10]                = s_LOGISIM_NET_99;
+   assign s_LOGISIM_BUS_118[0]               = s_LOGISIM_BUS_2[12];
+   assign s_LOGISIM_BUS_38[0]                = s_LOGISIM_BUS_118[0];
+   assign s_LOGISIM_BUS_118[1]               = s_LOGISIM_BUS_2[13];
+   assign s_LOGISIM_BUS_38[1]                = s_LOGISIM_BUS_118[1];
+   assign s_LOGISIM_BUS_118[2]               = s_LOGISIM_BUS_2[14];
+   assign s_LOGISIM_BUS_38[2]                = s_LOGISIM_BUS_118[2];
+   assign s_LOGISIM_NET_119                  = s_LOGISIM_BUS_2[25];
+   assign s_LOGISIM_BUS_38[3]                = s_LOGISIM_NET_119;
+   assign s_LOGISIM_NET_121                  = s_LOGISIM_BUS_2[30];
+   assign s_LOGISIM_BUS_38[4]                = s_LOGISIM_NET_121;
+   assign s_LOGISIM_BUS_122[0]               = s_LOGISIM_BUS_2[7];
+   assign s_LOGISIM_BUS_71[0]                = s_LOGISIM_BUS_122[0];
+   assign s_LOGISIM_BUS_122[1]               = s_LOGISIM_BUS_2[8];
+   assign s_LOGISIM_BUS_71[1]                = s_LOGISIM_BUS_122[1];
+   assign s_LOGISIM_BUS_122[2]               = s_LOGISIM_BUS_2[9];
+   assign s_LOGISIM_BUS_71[2]                = s_LOGISIM_BUS_122[2];
+   assign s_LOGISIM_BUS_122[3]               = s_LOGISIM_BUS_2[10];
+   assign s_LOGISIM_BUS_71[3]                = s_LOGISIM_BUS_122[3];
+   assign s_LOGISIM_BUS_122[4]               = s_LOGISIM_BUS_2[11];
+   assign s_LOGISIM_BUS_71[4]                = s_LOGISIM_BUS_122[4];
+   assign s_LOGISIM_BUS_123[0]               = s_LOGISIM_BUS_2[25];
+   assign s_LOGISIM_BUS_71[5]                = s_LOGISIM_BUS_123[0];
+   assign s_LOGISIM_BUS_123[1]               = s_LOGISIM_BUS_2[26];
+   assign s_LOGISIM_BUS_71[6]                = s_LOGISIM_BUS_123[1];
+   assign s_LOGISIM_BUS_123[2]               = s_LOGISIM_BUS_2[27];
+   assign s_LOGISIM_BUS_71[7]                = s_LOGISIM_BUS_123[2];
+   assign s_LOGISIM_BUS_123[3]               = s_LOGISIM_BUS_2[28];
+   assign s_LOGISIM_BUS_71[8]                = s_LOGISIM_BUS_123[3];
+   assign s_LOGISIM_BUS_123[4]               = s_LOGISIM_BUS_2[29];
+   assign s_LOGISIM_BUS_71[9]                = s_LOGISIM_BUS_123[4];
+   assign s_LOGISIM_BUS_123[5]               = s_LOGISIM_BUS_2[30];
+   assign s_LOGISIM_BUS_71[10]               = s_LOGISIM_BUS_123[5];
+   assign s_LOGISIM_BUS_123[6]               = s_LOGISIM_BUS_2[31];
+   assign s_LOGISIM_BUS_71[11]               = s_LOGISIM_BUS_123[6];
+   assign s_LOGISIM_BUS_124[0]               = s_LOGISIM_BUS_2[25];
+   assign s_LOGISIM_BUS_1[4]                 = s_LOGISIM_BUS_124[0];
+   assign s_LOGISIM_BUS_124[1]               = s_LOGISIM_BUS_2[26];
+   assign s_LOGISIM_BUS_1[5]                 = s_LOGISIM_BUS_124[1];
+   assign s_LOGISIM_BUS_124[2]               = s_LOGISIM_BUS_2[27];
+   assign s_LOGISIM_BUS_1[6]                 = s_LOGISIM_BUS_124[2];
+   assign s_LOGISIM_BUS_124[3]               = s_LOGISIM_BUS_2[28];
+   assign s_LOGISIM_BUS_1[7]                 = s_LOGISIM_BUS_124[3];
+   assign s_LOGISIM_BUS_124[4]               = s_LOGISIM_BUS_2[29];
+   assign s_LOGISIM_BUS_1[8]                 = s_LOGISIM_BUS_124[4];
+   assign s_LOGISIM_BUS_124[5]               = s_LOGISIM_BUS_2[30];
+   assign s_LOGISIM_BUS_1[9]                 = s_LOGISIM_BUS_124[5];
+   assign s_LOGISIM_BUS_125[0]               = s_LOGISIM_BUS_2[8];
+   assign s_LOGISIM_BUS_1[0]                 = s_LOGISIM_BUS_125[0];
+   assign s_LOGISIM_BUS_125[1]               = s_LOGISIM_BUS_2[9];
+   assign s_LOGISIM_BUS_1[1]                 = s_LOGISIM_BUS_125[1];
+   assign s_LOGISIM_BUS_125[2]               = s_LOGISIM_BUS_2[10];
+   assign s_LOGISIM_BUS_1[2]                 = s_LOGISIM_BUS_125[2];
+   assign s_LOGISIM_BUS_125[3]               = s_LOGISIM_BUS_2[11];
+   assign s_LOGISIM_BUS_1[3]                 = s_LOGISIM_BUS_125[3];
 
    /***************************************************************************
     ** Here all input connections are defined                                **
     ***************************************************************************/
-   assign s_LOGISIM_NET_82                   = RST;
-   assign s_LOGISIM_NET_98                   = GO;
+   assign s_LOGISIM_NET_87                   = RST;
+   assign s_LOGISIM_NET_105                  = GO;
 
    /***************************************************************************
     ** Here all output connections are defined                               **
     ***************************************************************************/
-   assign SEG                                = s_LOGISIM_BUS_69[7:0];
-   assign NA                                 = s_LOGISIM_BUS_91[7:0];
-  
+   assign SEG                                = s_LOGISIM_BUS_74[7:0];
+//   assign                                    = s_LOGISIM_BUS_81[31:0];
+   assign NA                                 = s_LOGISIM_BUS_98[7:0];
 
    /***************************************************************************
     ** Here all in-lined components are defined                              **
     ***************************************************************************/
-   assign s_LOGISIM_BUS_73[11:0] = 12'd0;
+   assign s_LOGISIM_NET_72 = 1'd0;
 
-   assign s_LOGISIM_BUS_109[31:0] = 32'd4;
+   assign s_LOGISIM_BUS_106[4:0] = 5'd10;
 
-   assign s_LOGISIM_BUS_99[4:0] = 5'd10;
+   assign s_LOGISIM_BUS_85[31:0] = 32'd34;
 
-   assign s_LOGISIM_NET_67 = 1'd0;
+   assign s_LOGISIM_NET_44 = 1'd1;
+
+   assign s_LOGISIM_BUS_115[4:0] = 5'd1;
+
+   assign s_LOGISIM_NET_86 = 1'd1;
+
+   assign s_LOGISIM_NET_84 = 1'd0;
+
+   assign s_LOGISIM_NET_100 = 1'd0;
+
+   assign s_LOGISIM_NET_109 = 1'd1;
+
+   assign s_LOGISIM_BUS_78[11:0] = 12'd0;
 
    assign s_LOGISIM_NET_68 = 1'd0;
 
-   assign s_LOGISIM_BUS_80[31:0] = 32'd34;
+   assign s_LOGISIM_BUS_116[31:0] = 32'd4;
 
-   assign s_LOGISIM_NET_28 = 1'd0;
+   assign s_LOGISIM_NET_73 = 1'd0;
 
-   assign s_LOGISIM_BUS_107[4:0] = 5'd1;
+   assign s_LOGISIM_BUS_82[31:0] = 32'h fffffffe;
 
-   assign s_LOGISIM_NET_93 = 1'd0;
+   assign s_LOGISIM_NET_52 = 1'd0;
 
-   assign s_LOGISIM_BUS_84[4:0] = 5'd17;
+   assign s_LOGISIM_BUS_96[15:0] = 16'd0;
 
-   assign s_LOGISIM_NET_71 = 1'd0;
-
-   assign s_LOGISIM_NET_42 = 1'd1;
-
-   assign s_LOGISIM_NET_63 = 1'd0;
-
-   assign s_LOGISIM_NET_102 = 1'd1;
-
-   assign s_LOGISIM_NET_88 = 1'd0;
-
-   assign s_LOGISIM_NET_79 = 1'd0;
-
-   assign s_LOGISIM_NET_43 = 1'd0;
-
-   assign s_LOGISIM_BUS_108[4:0] = 5'd1;
-
-   assign s_LOGISIM_NET_52 = 1'd1;
-
-   assign s_LOGISIM_BUS_77[31:0] = 32'h fffffffe;
+   assign s_LOGISIM_NET_37 = 1'd0;
 
    assign s_LOGISIM_NET_27 = 1'd0;
 
-   assign s_LOGISIM_NET_81 = 1'd1;
+   assign s_LOGISIM_NET_28 = 1'd0;
+
+   assign s_LOGISIM_BUS_89[4:0] = 5'd17;
+
+   assign s_LOGISIM_BUS_114[4:0] = 5'd1;
+
+   assign s_LOGISIM_NET_76 = 1'd0;
+
+   assign s_LOGISIM_NET_56 = 1'd1;
+
+   assign s_LOGISIM_NET_46 = 1'd0;
+
+   assign s_LOGISIM_NET_45 = 1'd0;
+
+   assign s_LOGISIM_NET_94 = 1'd0;
 
 
-
-   assign s_LOGISIM_BUS_67[31:0] = 32'd0;
    /***************************************************************************
     ** Here all normal components are defined                                **
     ***************************************************************************/
-   Multiplexer_bus_2 #(.NrOfBits(12))
-      MUX_1 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_2[31:20]),
-             .MuxIn_1(s_LOGISIM_BUS_66[11:0]),
-             .MuxOut(s_LOGISIM_BUS_35[11:0]),
-             .Sel(s_LOGISIM_NET_12));
-
-   Adder #(.ExtendedBits(33),
-           .NrOfBits(32))
-      ADDER2C_1 (.CarryIn(s_LOGISIM_NET_68),
-                 .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_6[31:0]),
-                 .DataB(s_LOGISIM_BUS_100[31:0]),
-                 .Result(s_LOGISIM_BUS_37[31:0]));
-
-   Multiplexer_bus_4 #(.NrOfBits(8))
-      MUX_2 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_53[7:0]),
-             .MuxIn_1(s_LOGISIM_BUS_53[15:8]),
-//             .MuxIn_2(s_LOGISIM_BUS_34[7:0]),
-//             .MuxIn_3(s_LOGISIM_BUS_34[7:0]),
-             .MuxIn_2(s_LOGISIM_BUS_53[23:16]),
-             .MuxIn_3(s_LOGISIM_BUS_53[31:24]),
-             .MuxOut(s_LOGISIM_BUS_8[7:0]),
-             .Sel(s_LOGISIM_BUS_57[1:0]));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_3 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_46[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_48[31:0]),
-             .MuxOut(s_LOGISIM_BUS_59[31:0]),
-             .Sel(s_LOGISIM_NET_19));
-
-   Shifter_32_bit #(.ShifterMode(0))
-      Shifter_1 (.DataA(s_LOGISIM_BUS_96[31:0]),
-                 .Result(s_LOGISIM_BUS_6[31:0]),
-                 .ShiftAmount(s_LOGISIM_BUS_108[4:0]));
-
-   Adder #(.ExtendedBits(33),
-           .NrOfBits(32))
-      ADDER2C_2 (.CarryIn(s_LOGISIM_NET_27),
-                 .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_100[31:0]),
-                 .DataB(s_LOGISIM_BUS_109[31:0]),
-                 .Result(s_LOGISIM_BUS_61[31:0]));
-
-   Bit_Extender_8_32      BitExtender_1 (.imm_in(s_LOGISIM_BUS_8[7:0]),
-                                         .imm_out(s_LOGISIM_BUS_65[31:0]));
-
    Comparator #(.NrOfBits(32),
                 .TwosComplement(1))
       Comparator_1 (.A_EQ_B(s_LOGISIM_NET_16),
                     .A_GT_B(),
                     .A_LT_B(),
-                    .DataA(s_LOGISIM_BUS_89[31:0]),
-                    .DataB(s_LOGISIM_BUS_80[31:0]));
-
-   AND_GATE #(.BubblesMask(0))
-      GATE_1 (.Input_1(s_LOGISIM_NET_16),
-              .Input_2(s_LOGISIM_NET_29),
-              .Result(s_LOGISIM_NET_18));
-
-   Bit_Extender_12_32_SIGN      BitExtender_2 (.imm_in(s_LOGISIM_BUS_1[11:0]),
-                                               .imm_out(s_LOGISIM_BUS_96[31:0]));
-
-   AND_GATE #(.BubblesMask(0))
-      GATE_2 (.Input_1(s_LOGISIM_NET_78),
-              .Input_2(s_LOGISIM_NET_72),
-              .Result(s_LOGISIM_NET_25));
-
-   Multiplexer_bus_2 #(.NrOfBits(5))
-      MUX_4 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_2[19:15]),
-             .MuxIn_1(s_LOGISIM_BUS_84[4:0]),
-             .MuxOut(s_LOGISIM_BUS_45[4:0]),
-             .Sel(s_LOGISIM_NET_29));
-
-   Multiplexer_bus_2 #(.NrOfBits(5))
-      MUX_5 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_2[24:20]),
-             .MuxIn_1(s_LOGISIM_BUS_99[4:0]),
-             .MuxOut(s_LOGISIM_BUS_56[4:0]),
-             .Sel(s_LOGISIM_NET_29));
-
-   REGISTER_FLIP_FLOP_PC #(.ActiveLevel(1),
-                           .NrOfBits(1))
-      REGISTER_FILE_1 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
-                       .ClockEnable(s_LOGISIM_NET_20),
-                       .D(s_LOGISIM_NET_102),
-                       .Q(s_LOGISIM_NET_70),
-                       .Reset(s_LOGISIM_NET_33),
-                       .Tick(LOGISIM_CLOCK_TREE_0[3]),
-                       .cs(s_LOGISIM_NET_43),
-                       .pre(s_LOGISIM_NET_71));
-       assign digin=(PC) ? s_LOGISIM_BUS_2[31:0] : (timer ? s_LOGISIM_BUS_64[31:0] :s_LOGISIM_BUS_76[31:0]); //输出PC的控制信号
-       FPGADigit      FPGADigit_1 (.AN(s_LOGISIM_BUS_91[7:0]),
-                                   .SEG(s_LOGISIM_BUS_69[7:0]),
-                                   .clkx(LOGISIM_CLOCK_TREE_0[4]),
-//                                   .dig(s_LOGISIM_BUS_76[31:0])
-                                   .dig(digin[31:0]));
-
-   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_57[11:2]),
-                            .clk(LOGISIM_CLOCK_TREE_0[4]),
-                            .tick(LOGISIM_CLOCK_TREE_0[2]),
-                            .d(s_LOGISIM_BUS_83[31:0]),
-                            .q(s_LOGISIM_BUS_53[31:0]),
-                            .we(s_LOGISIM_NET_15));
+                    .DataA(s_LOGISIM_BUS_95[31:0]),
+                    .DataB(s_LOGISIM_BUS_85[31:0]));
 
    Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_6 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_87[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_3[31:0]),
-             .MuxOut(s_LOGISIM_BUS_46[31:0]),
-             .Sel(s_LOGISIM_NET_11));
+      MUX_1 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_49[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_51[31:0]),
+             .MuxOut(s_LOGISIM_BUS_63[31:0]),
+             .Sel(s_LOGISIM_NET_19));
 
-   AND_GATE #(.BubblesMask(0))
-      GATE_3 (.Input_1(s_LOGISIM_NET_29),
-              .Input_2(s_LOGISIM_NET_104),
-              .Result(s_LOGISIM_NET_20));
+   OR_GATE #(.BubblesMask(0))
+      GATE_1 (.Input_1(s_LOGISIM_NET_11),
+              .Input_2(s_LOGISIM_NET_19),
+              .Result(s_LOGISIM_NET_50));
+
+   Bit_Extender_8_32      BitExtender_1 (.imm_in(s_LOGISIM_BUS_8[7:0]),
+                                         .imm_out(s_LOGISIM_BUS_70[31:0]));
 
    Adder #(.ExtendedBits(33),
            .NrOfBits(32))
-      ADDER2C_3 (.CarryIn(s_LOGISIM_NET_67),
+      ADDER2C_1 (.CarryIn(s_LOGISIM_NET_27),
                  .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_5[31:0]),
-                 .DataB(s_LOGISIM_BUS_100[31:0]),
-                 .Result(s_LOGISIM_BUS_3[31:0]));
+                 .DataA(s_LOGISIM_BUS_107[31:0]),
+                 .DataB(s_LOGISIM_BUS_116[31:0]),
+                 .Result(s_LOGISIM_BUS_66[31:0]));
 
    Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_7 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_57[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_53[31:0]),
-             .MuxOut(s_LOGISIM_BUS_4[31:0]),
-             .Sel(s_LOGISIM_NET_21));
+      MUX_2 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_4[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_66[31:0]),
+             .MuxOut(s_LOGISIM_BUS_79[31:0]),
+             .Sel(s_LOGISIM_NET_50));
 
-   Bit_Extender_12_32_SIGN      BitExtender_3 (.imm_in(s_LOGISIM_BUS_35[11:0]),
-                                               .imm_out(s_LOGISIM_BUS_50[31:0]));
+   Multiplexer_bus_4 #(.NrOfBits(8))
+      MUX_3 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_57[7:0]),
+             .MuxIn_1(s_LOGISIM_BUS_57[15:8]),
+             .MuxIn_2(s_LOGISIM_BUS_57[23:16]),
+             .MuxIn_3(s_LOGISIM_BUS_57[31:24]),
+             .MuxOut(s_LOGISIM_BUS_8[7:0]),
+             .Sel(s_LOGISIM_BUS_61[1:0]));
 
    AND_GATE_BUS #(.BubblesMask(0),
                   .NrOfBits(32))
-      GATE_4 (.Input_1(s_LOGISIM_BUS_57[31:0]),
-              .Input_2(s_LOGISIM_BUS_77[31:0]),
-              .Result(s_LOGISIM_BUS_48[31:0]));
+      GATE_2 (.Input_1(s_LOGISIM_BUS_61[31:0]),
+              .Input_2(s_LOGISIM_BUS_82[31:0]),
+              .Result(s_LOGISIM_BUS_51[31:0]));
+
+   OR_GATE_3_INPUTS #(.BubblesMask(0))
+      GATE_3 (.Input_1(s_LOGISIM_NET_67),
+              .Input_2(s_LOGISIM_NET_7),
+              .Input_3(s_LOGISIM_NET_25),
+              .Result(s_LOGISIM_NET_104));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_4 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_66[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_40[31:0]),
+             .MuxOut(s_LOGISIM_BUS_92[31:0]),
+             .Sel(s_LOGISIM_NET_104));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_5 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_61[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_57[31:0]),
+             .MuxOut(s_LOGISIM_BUS_4[31:0]),
+             .Sel(s_LOGISIM_NET_21));
+
+   AND_GATE #(.BubblesMask(1))
+      GATE_4 (.Input_1(s_LOGISIM_NET_10),
+              .Input_2(s_LOGISIM_NET_17),
+              .Result(s_LOGISIM_NET_7));
+
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_6 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_2[24:20]),
+             .MuxIn_1(s_LOGISIM_BUS_106[4:0]),
+             .MuxOut(s_LOGISIM_BUS_60[4:0]),
+             .Sel(s_LOGISIM_NET_29));
+
+   NOT_GATE      GATE_5 (.Input_1(s_LOGISIM_NET_75),
+                         .Result(s_LOGISIM_NET_30));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_7 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_79[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_70[31:0]),
+             .MuxOut(s_LOGISIM_BUS_33[31:0]),
+             .Sel(s_LOGISIM_NET_55));
+
+   REGISTER_FLIP_FLOP_PC #(.ActiveLevel(1),
+                           .NrOfBits(32))
+      REGISTER_FILE_1 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
+                       .ClockEnable(s_LOGISIM_NET_30),
+                       .D(s_LOGISIM_BUS_63[31:0]),
+                       .Q(s_LOGISIM_BUS_107[31:0]),
+                       .Reset(s_LOGISIM_NET_87),
+                       .Tick(LOGISIM_CLOCK_TREE_0[2]),
+                       .cs(s_LOGISIM_NET_94),
+                       .pre(s_LOGISIM_NET_28));
+
+   ROM_Order_ROM      ROM_1 (.Address(s_LOGISIM_BUS_107[11:2]),
+                             .Data(s_LOGISIM_BUS_2[31:0]));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_6 (.Input_1(s_LOGISIM_NET_83),
+              .Input_2(s_LOGISIM_NET_77),
+              .Result(s_LOGISIM_NET_25));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_7 (.Input_1(s_LOGISIM_NET_16),
+              .Input_2(s_LOGISIM_NET_29),
+              .Result(s_LOGISIM_NET_18));
+
+   Bit_Extender_12_32_SIGN      BitExtender_2 (.imm_in(s_LOGISIM_BUS_36[11:0]),
+                                               .imm_out(s_LOGISIM_BUS_54[31:0]));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_8 (.Input_1(s_LOGISIM_NET_10),
+              .Input_2(s_LOGISIM_NET_101),
+              .Result(s_LOGISIM_NET_67));
+
+   Multiplexer_bus_2 #(.NrOfBits(32))
+      MUX_8 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_33[31:0]),
+             .MuxIn_1(s_LOGISIM_BUS_65[31:0]),
+             .MuxOut(s_LOGISIM_BUS_113[31:0]),
+             .Sel(s_LOGISIM_NET_62));
+
+   Multiplexer_bus_2 #(.NrOfBits(5))
+      MUX_9 (.Enable(1'b1),
+             .MuxIn_0(s_LOGISIM_BUS_2[19:15]),
+             .MuxIn_1(s_LOGISIM_BUS_89[4:0]),
+             .MuxOut(s_LOGISIM_BUS_48[4:0]),
+             .Sel(s_LOGISIM_NET_29));
+
+   Bit_Extender_20_32_SIGN      BitExtender_3 (.imm_in(s_LOGISIM_BUS_108[19:0]),
+                                               .imm_out(s_LOGISIM_BUS_102[31:0]));
+
+   FPGADigit      FPGADigit_1 (.AN(s_LOGISIM_BUS_98[7:0]),
+                               .SEG(s_LOGISIM_BUS_74[7:0]),
+                               .clkx(LOGISIM_CLOCK_TREE_0[4]),
+                               .dig(s_LOGISIM_BUS_81[31:0]));
 
    REGISTER_FLIP_FLOP #(.ActiveLevel(1),
                         .NrOfBits(32))
       REGISTER_FILE_2 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
                        .ClockEnable(s_LOGISIM_NET_18),
-                       .D(s_LOGISIM_BUS_83[31:0]),
-                       .Q(s_LOGISIM_BUS_76[31:0]),
-                       .Reset(s_LOGISIM_NET_82),
+                       .D(s_LOGISIM_BUS_88[31:0]),
+                       .Q(s_LOGISIM_BUS_81[31:0]),
+                       .Reset(s_LOGISIM_NET_87),
                        .Tick(LOGISIM_CLOCK_TREE_0[2]),
-                       .cs(s_LOGISIM_NET_63),
-                       .pre(s_LOGISIM_NET_93));
-
-   OR_GATE #(.BubblesMask(0))
-      GATE_5 (.Input_1(s_LOGISIM_NET_11),
-              .Input_2(s_LOGISIM_NET_19),
-              .Result(s_LOGISIM_NET_47));
+                       .cs(s_LOGISIM_NET_68),
+                       .pre(s_LOGISIM_NET_100));
 
    Adder #(.ExtendedBits(33),
            .NrOfBits(32))
-      ADDER2C_4 (.CarryIn(s_LOGISIM_NET_79),
+      ADDER2C_2 (.CarryIn(s_LOGISIM_NET_73),
                  .CarryOut(),
-                 .DataA(s_LOGISIM_BUS_73[31:0]),
-                 .DataB(s_LOGISIM_BUS_100[31:0]),
-                 .Result(s_LOGISIM_BUS_60[31:0]));
+                 .DataA(s_LOGISIM_BUS_6[31:0]),
+                 .DataB(s_LOGISIM_BUS_107[31:0]),
+                 .Result(s_LOGISIM_BUS_40[31:0]));
 
-   Shifter_32_bit #(.ShifterMode(0))
-      Shifter_2 (.DataA(s_LOGISIM_BUS_95[31:0]),
-                 .Result(s_LOGISIM_BUS_5[31:0]),
-                 .ShiftAmount(s_LOGISIM_BUS_107[4:0]));
+   Bit_Extender_12_32_SIGN      BitExtender_4 (.imm_in(s_LOGISIM_BUS_1[11:0]),
+                                               .imm_out(s_LOGISIM_BUS_103[31:0]));
 
-   NOT_GATE      GATE_6 (.Input_1(s_LOGISIM_NET_70),
-                         .Result(s_LOGISIM_NET_30));
+   REGISTER_FLIP_FLOP_PC #(.ActiveLevel(1),
+                           .NrOfBits(1))
+      REGISTER_FILE_3 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
+                       .ClockEnable(s_LOGISIM_NET_20),
+                       .D(s_LOGISIM_NET_109),
+                       .Q(s_LOGISIM_NET_75),
+                       .Reset(s_LOGISIM_NET_34),
+                       .Tick(LOGISIM_CLOCK_TREE_0[3]),
+                       .cs(s_LOGISIM_NET_46),
+                       .pre(s_LOGISIM_NET_76));
 
-   AND_GATE #(.BubblesMask(0))
-      GATE_7 (.Input_1(s_LOGISIM_NET_10),
-              .Input_2(s_LOGISIM_NET_94),
-              .Result(s_LOGISIM_NET_62));
+   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_61[11:2]),
+                            .clk(LOGISIM_CLOCK_TREE_0[4]),
+                            .tick(LOGISIM_CLOCK_TREE_0[2]),
+                            .d(s_LOGISIM_BUS_88[31:0]),
+                            .q(s_LOGISIM_BUS_57[31:0]),
+                            .we(s_LOGISIM_NET_15));
 
-   Bit_Extender_20_32_SIGN      BitExtender_4 (.imm_in(s_LOGISIM_BUS_101[19:0]),
-                                               .imm_out(s_LOGISIM_BUS_95[31:0]));
+   Adder #(.ExtendedBits(33),
+           .NrOfBits(32))
+      ADDER2C_3 (.CarryIn(s_LOGISIM_NET_84),
+                 .CarryOut(),
+                 .DataA(s_LOGISIM_BUS_78[31:0]),
+                 .DataB(s_LOGISIM_BUS_107[31:0]),
+                 .Result(s_LOGISIM_BUS_65[31:0]));
 
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_8 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_74[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_65[31:0]),
-             .MuxOut(s_LOGISIM_BUS_32[31:0]),
-             .Sel(s_LOGISIM_NET_51));
-
-   AND_GATE #(.BubblesMask(1))
-      GATE_8 (.Input_1(s_LOGISIM_NET_10),
-              .Input_2(s_LOGISIM_NET_17),
-              .Result(s_LOGISIM_NET_7));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_9 (.Enable(1'b1),
-             .MuxIn_0(s_LOGISIM_BUS_83[31:0]),
-             .MuxIn_1(s_LOGISIM_BUS_50[31:0]),
-             .MuxOut(s_LOGISIM_BUS_38[31:0]),
-             .Sel(s_LOGISIM_NET_24));
+   Adder #(.ExtendedBits(33),
+           .NrOfBits(32))
+      ADDER2C_4 (.CarryIn(s_LOGISIM_NET_72),
+                 .CarryOut(),
+                 .DataA(s_LOGISIM_BUS_5[31:0]),
+                 .DataB(s_LOGISIM_BUS_107[31:0]),
+                 .Result(s_LOGISIM_BUS_3[31:0]));
 
    Multiplexer_bus_2 #(.NrOfBits(32))
       MUX_10 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_61[31:0]),
-              .MuxIn_1(s_LOGISIM_BUS_37[31:0]),
-              .MuxOut(s_LOGISIM_BUS_87[31:0]),
-              .Sel(s_LOGISIM_NET_97));
+              .MuxIn_0(s_LOGISIM_BUS_92[31:0]),
+              .MuxIn_1(s_LOGISIM_BUS_3[31:0]),
+              .MuxOut(s_LOGISIM_BUS_49[31:0]),
+              .Sel(s_LOGISIM_NET_11));
 
-   ROM_Order_ROM      ROM_1 (.Address(s_LOGISIM_BUS_100[11:2]),
-                             .Data(s_LOGISIM_BUS_2[31:0]));
+   Shifter_32_bit #(.ShifterMode(0))
+      Shifter_1 (.DataA(s_LOGISIM_BUS_102[31:0]),
+                 .Result(s_LOGISIM_BUS_5[31:0]),
+                 .ShiftAmount(s_LOGISIM_BUS_114[4:0]));
 
-   NOT_GATE      GATE_9 (.Input_1(s_LOGISIM_NET_16),
-                         .Result(s_LOGISIM_NET_104));
-
-   REGISTER_FLIP_FLOP_PC #(.ActiveLevel(1),
-                           .NrOfBits(32))
-      REGISTER_FILE_3 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
-                       .ClockEnable(s_LOGISIM_NET_30),
-                       .D(s_LOGISIM_BUS_59[31:0]),
-                       .Q(s_LOGISIM_BUS_100[31:0]),
-                       .Reset(s_LOGISIM_NET_82),
-                       .Tick(LOGISIM_CLOCK_TREE_0[2]),
-                       .cs(s_LOGISIM_NET_88),
-                       .pre(s_LOGISIM_NET_28));
+   Multiplexer_bus_2 #(.NrOfBits(12))
+      MUX_11 (.Enable(1'b1),
+              .MuxIn_0(s_LOGISIM_BUS_2[31:20]),
+              .MuxIn_1(s_LOGISIM_BUS_71[11:0]),
+              .MuxOut(s_LOGISIM_BUS_36[11:0]),
+              .Sel(s_LOGISIM_NET_12));
 
    OR_GATE #(.BubblesMask(0))
-      GATE_10 (.Input_1(s_LOGISIM_NET_98),
-               .Input_2(s_LOGISIM_NET_82),
-               .Result(s_LOGISIM_NET_33));
-
-   Multiplexer_bus_2 #(.NrOfBits(32))
-      MUX_11 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_4[31:0]),
-              .MuxIn_1(s_LOGISIM_BUS_61[31:0]),
-              .MuxOut(s_LOGISIM_BUS_74[31:0]),
-              .Sel(s_LOGISIM_NET_47));
+      GATE_9 (.Input_1(s_LOGISIM_NET_105),
+              .Input_2(s_LOGISIM_NET_87),
+              .Result(s_LOGISIM_NET_34));
 
    Multiplexer_bus_2 #(.NrOfBits(32))
       MUX_12 (.Enable(1'b1),
-              .MuxIn_0(s_LOGISIM_BUS_32[31:0]),
-              .MuxIn_1(s_LOGISIM_BUS_60[31:0]),
-              .MuxOut(s_LOGISIM_BUS_106[31:0]),
-              .Sel(s_LOGISIM_NET_58));
+              .MuxIn_0(s_LOGISIM_BUS_88[31:0]),
+              .MuxIn_1(s_LOGISIM_BUS_54[31:0]),
+              .MuxOut(s_LOGISIM_BUS_39[31:0]),
+              .Sel(s_LOGISIM_NET_24));
 
-   OR_GATE_3_INPUTS #(.BubblesMask(0))
-      GATE_11 (.Input_1(s_LOGISIM_NET_62),
-               .Input_2(s_LOGISIM_NET_7),
-               .Input_3(s_LOGISIM_NET_25),
-               .Result(s_LOGISIM_NET_97));
+   NOT_GATE      GATE_10 (.Input_1(s_LOGISIM_NET_75),
+                          .Result(s_LOGISIM_NET_31));
+
+   NOT_GATE      GATE_11 (.Input_1(s_LOGISIM_NET_16),
+                          .Result(s_LOGISIM_NET_111));
+
+   LogisimCounter #(.ClkEdge(1),
+                    .max_val(65535),
+                    .mode(1),
+                    .width(16))
+      COUNTER_1 (.ClockEnable(LOGISIM_CLOCK_TREE_0[2]),
+                 .CompareOut(),
+                 .CountValue(s_LOGISIM_BUS_64[15:0]),
+                 .GlobalClock(LOGISIM_CLOCK_TREE_0[4]),
+                 .LoadData(s_LOGISIM_BUS_96[15:0]),
+                 .Up_n_Down(s_LOGISIM_NET_31),
+                 .clear(s_LOGISIM_NET_52),
+                 .load(s_LOGISIM_NET_37),
+                 .pre(s_LOGISIM_NET_45));
+
+   AND_GATE #(.BubblesMask(0))
+      GATE_12 (.Input_1(s_LOGISIM_NET_29),
+               .Input_2(s_LOGISIM_NET_111),
+               .Result(s_LOGISIM_NET_20));
+
+   Shifter_32_bit #(.ShifterMode(0))
+      Shifter_2 (.DataA(s_LOGISIM_BUS_103[31:0]),
+                 .Result(s_LOGISIM_BUS_6[31:0]),
+                 .ShiftAmount(s_LOGISIM_BUS_115[4:0]));
 
 
    /***************************************************************************
     ** Here all sub-circuits are defined                                     **
     ***************************************************************************/
+   ALU      ALU_1 (.AluOP(s_LOGISIM_BUS_0[3:0]),
+                   .Equal(s_LOGISIM_NET_10),
+                   .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
+                   .Result(s_LOGISIM_BUS_61[31:0]),
+                   .Result_2(),
+                   .X(s_LOGISIM_BUS_95[31:0]),
+                   .Y(s_LOGISIM_BUS_39[31:0]),
+                   .bigger_equal(),
+                   .smaller(s_LOGISIM_NET_77));
+
    hardwired_controller      hardwired_controller_1 (.ALU_OP(s_LOGISIM_BUS_0[3:0]),
                                                      .ALU_SRC(s_LOGISIM_NET_24),
-                                                     .AUIPC(s_LOGISIM_NET_58),
-                                                     .BLT(s_LOGISIM_NET_78),
-                                                     .Beq(s_LOGISIM_NET_94),
+                                                     .AUIPC(s_LOGISIM_NET_62),
+                                                     .BLT(s_LOGISIM_NET_83),
+                                                     .Beq(s_LOGISIM_NET_101),
                                                      .Bne(s_LOGISIM_NET_17),
                                                      .CSRRCI(),
                                                      .CSRRSI(),
-                                                     .Funct(s_LOGISIM_BUS_36[4:0]),
+                                                     .Funct(s_LOGISIM_BUS_38[4:0]),
                                                      .IR21(s_LOGISIM_BUS_2[21]),
                                                      .JAL(s_LOGISIM_NET_11),
                                                      .Jalr(s_LOGISIM_NET_19),
-                                                     .LBU(s_LOGISIM_NET_51),
+                                                     .LBU(s_LOGISIM_NET_55),
                                                      .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
                                                      .MemToReg(s_LOGISIM_NET_21),
                                                      .MemWrite(s_LOGISIM_NET_15),
                                                      .OP(s_LOGISIM_BUS_2[6:2]),
                                                      .RegWrite(s_LOGISIM_NET_23),
-                                                     .SRA(s_LOGISIM_NET_90),
+                                                     .SRA(s_LOGISIM_NET_97),
                                                      .S_type(s_LOGISIM_NET_12),
                                                      .ecall(s_LOGISIM_NET_29),
                                                      .rs1_used(),
                                                      .rs2_used(),
-                                                     .uret(s_LOGISIM_NET_31));
+                                                     .uret(s_LOGISIM_NET_32));
 
-//   RegFIle      RegFIle_1 (.Clk(s_LOGISIM_NET_103),
-//                           .Din(s_LOGISIM_BUS_106[31:0]),
+//   RegFIle      RegFIle_1 (.Clk(s_LOGISIM_NET_110),
+//                           .Din(s_LOGISIM_BUS_113[31:0]),
 //                           .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
-//                           .R1(s_LOGISIM_BUS_89[31:0]),
-//                           .R1Adr(s_LOGISIM_BUS_45[4:0]),
-//                           .R2(s_LOGISIM_BUS_83[31:0]),
-//                           .R2Adr(s_LOGISIM_BUS_56[4:0]),
+//                           .R1(s_LOGISIM_BUS_95[31:0]),
+//                           .R1Adr(s_LOGISIM_BUS_48[4:0]),
+//                           .R2(s_LOGISIM_BUS_88[31:0]),
+//                           .R2Adr(s_LOGISIM_BUS_60[4:0]),
 //                           .WAdr(s_LOGISIM_BUS_2[11:7]),
 //                           .WE(s_LOGISIM_NET_23));
-   regfile1      regfile0(.clk(LOGISIM_CLOCK_TREE_0[4]),
-                           .wdata(s_LOGISIM_BUS_106[31:0]),
+
+ regfile1      regfile0(.clk(LOGISIM_CLOCK_TREE_0[4]),
+                           .wdata(s_LOGISIM_BUS_113[31:0]),
                            .wen(s_LOGISIM_NET_23),
                            .tick(LOGISIM_CLOCK_TREE_0[2]),
-                           .rdata1(s_LOGISIM_BUS_89[31:0]),
-                           .raddr1(s_LOGISIM_BUS_45[4:0]),
-                           .rdata2(s_LOGISIM_BUS_83[31:0]),
-                           .raddr2(s_LOGISIM_BUS_56[4:0]),
+                           .rdata1(s_LOGISIM_BUS_95[31:0]),
+                           .raddr1(s_LOGISIM_BUS_48[4:0]),
+                           .rdata2(s_LOGISIM_BUS_88[31:0]),
+                           .raddr2(s_LOGISIM_BUS_60[4:0]),
                            .waddr(s_LOGISIM_BUS_2[11:7]));
- 
-   ALU      ALU_1 (.AluOP(s_LOGISIM_BUS_0[3:0]),
-                   .Equal(s_LOGISIM_NET_10),
-                   .LOGISIM_CLOCK_TREE_0(LOGISIM_CLOCK_TREE_0),
-                   .Result(s_LOGISIM_BUS_57[31:0]),
-                   .Result_2(),
-                   .X(s_LOGISIM_BUS_89[31:0]),
-                   .Y(s_LOGISIM_BUS_38[31:0]),
-                   .bigger_equal(),
-                   .smaller(s_LOGISIM_NET_72));
-                   
-      
-      LogisimCounter #(.ClkEdge(1),
-                    .max_val(65535),
-                    .mode(1),
-                    .width(32))
-      COUNTER_1 (.ClockEnable(LOGISIM_CLOCK_TREE_0[2]),
-                 .CompareOut(),
-                 .Enable(s_LOGISIM_NET_30),
-                 .CountValue(s_LOGISIM_BUS_64[31:0]),
-                 .GlobalClock(LOGISIM_CLOCK_TREE_0[4]),
-                 .LoadData(s_LOGISIM_BUS_67[31:0]),
-                 .Up_n_Down(1),
-                 .clear(s_LOGISIM_NET_82),
-                 .load(s_LOGISIM_NET_67),
-                 .pre(s_LOGISIM_NET_67));
-
-
 
 endmodule

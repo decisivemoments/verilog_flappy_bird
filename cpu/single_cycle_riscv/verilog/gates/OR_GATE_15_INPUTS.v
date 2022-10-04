@@ -1,17 +1,18 @@
 /******************************************************************************
  ** Logisim goes FPGA automatic generated Verilog code                       **
  **                                                                          **
- ** Component : OR_GATE_14_INPUTS                                            **
+ ** Component : OR_GATE_15_INPUTS                                            **
  **                                                                          **
  ******************************************************************************/
 
 `timescale 1ns/1ps
-module OR_GATE_14_INPUTS( Input_1,
+module OR_GATE_15_INPUTS( Input_1,
                           Input_10,
                           Input_11,
                           Input_12,
                           Input_13,
                           Input_14,
+                          Input_15,
                           Input_2,
                           Input_3,
                           Input_4,
@@ -37,6 +38,7 @@ module OR_GATE_14_INPUTS( Input_1,
    input  Input_12;
    input  Input_13;
    input  Input_14;
+   input  Input_15;
    input  Input_2;
    input  Input_3;
    input  Input_4;
@@ -60,6 +62,7 @@ module OR_GATE_14_INPUTS( Input_1,
    wire s_real_input_12;
    wire s_real_input_13;
    wire s_real_input_14;
+   wire s_real_input_15;
    wire s_real_input_2;
    wire s_real_input_3;
    wire s_real_input_4;
@@ -68,7 +71,7 @@ module OR_GATE_14_INPUTS( Input_1,
    wire s_real_input_7;
    wire s_real_input_8;
    wire s_real_input_9;
-   wire[13:0] s_signal_invert_mask;
+   wire[14:0] s_signal_invert_mask;
 
 
    /***************************************************************************
@@ -89,6 +92,7 @@ module OR_GATE_14_INPUTS( Input_1,
    assign s_real_input_12 = (s_signal_invert_mask[11]) ? ~Input_12: Input_12;
    assign s_real_input_13 = (s_signal_invert_mask[12]) ? ~Input_13: Input_13;
    assign s_real_input_14 = (s_signal_invert_mask[13]) ? ~Input_14: Input_14;
+   assign s_real_input_15 = (s_signal_invert_mask[14]) ? ~Input_15: Input_15;
 
    /***************************************************************************
     ** Here the functionality is defined                                     **
@@ -106,7 +110,8 @@ module OR_GATE_14_INPUTS( Input_1,
                    s_real_input_11 |
                    s_real_input_12 |
                    s_real_input_13 |
-                   s_real_input_14;
+                   s_real_input_14 |
+                   s_real_input_15;
 
 
 endmodule
