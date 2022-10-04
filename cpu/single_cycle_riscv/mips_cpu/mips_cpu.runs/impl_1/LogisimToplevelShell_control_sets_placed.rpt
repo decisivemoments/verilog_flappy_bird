@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Oct  4 19:21:09 2022
+| Date         : Tue Oct  4 19:45:53 2022
 | Host         : BCC4 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file LogisimToplevelShell_control_sets_placed.rpt
 | Design       : LogisimToplevelShell
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    20 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -44,10 +44,10 @@ Table of Contents
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     4 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | No                     |              10 |            5 |
 | No           | No                    | Yes                    |               1 |            1 |
 | No           | Yes                   | No                     |              62 |           16 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              43 |           12 |
+| Yes          | No                    | Yes                    |              53 |           12 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -74,12 +74,12 @@ Table of Contents
 |                   Clock Signal                  |                         Enable Signal                        |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
 +-------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
 |  FPGA_GlobalClock_IBUF_BUFG                     |                                                              | single_cycle_riscv_0/REGISTER_FILE_3/s_LOGISIM_NET_34 |                1 |              1 |         1.00 |
-|  single_cycle_riscv_0/FPGADigit_1/u_divider/CLK |                                                              |                                                       |                1 |              3 |         3.00 |
+|  single_cycle_riscv_0/FPGADigit_1/u_divider/CLK |                                                              |                                                       |                2 |              3 |         1.50 |
 |  FPGA_GlobalClock_IBUF_BUFG                     |                                                              |                                                       |                3 |              7 |         2.33 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | CLOCKGEN_0/E[0]                                              | FPGA_INPUT_PIN_1_IBUF                                 |                4 |             11 |         2.75 |
-|  FPGA_GlobalClock_IBUF_BUFG                     |                                                              | single_cycle_riscv_0/FPGADigit_1/u_divider/clk_N      |                8 |             31 |         3.88 |
+|  FPGA_GlobalClock_IBUF_BUFG                     | CLOCKGEN_0/E[0]                                              | FPGA_INPUT_PIN_1_IBUF                                 |                6 |             21 |         3.50 |
 |  FPGA_GlobalClock_IBUF_BUFG                     |                                                              | LogisimTickGenerator_0/s_count_reg[31]_i_1_n_0        |                8 |             31 |         3.88 |
-|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_1/s_output_regs_reg[2][0] | FPGA_INPUT_PIN_1_IBUF                                 |                8 |             32 |         4.00 |
+|  FPGA_GlobalClock_IBUF_BUFG                     |                                                              | single_cycle_riscv_0/FPGADigit_1/u_divider/clk_N      |                8 |             31 |         3.88 |
+|  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_1/s_output_regs_reg[2][0] | FPGA_INPUT_PIN_1_IBUF                                 |                6 |             32 |         5.33 |
 |  FPGA_GlobalClock_IBUF_BUFG                     | single_cycle_riscv_0/REGISTER_FILE_1/p_0_in_0                |                                                       |               12 |             96 |         8.00 |
 +-------------------------------------------------+--------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
 

@@ -51,7 +51,7 @@ module RAM_Data_RAM( addr,
    /***************************************************************************
     ** Here the inputs are defined                                           **
     ***************************************************************************/
-   input[9:0]  addr;
+   input[19:0]  addr;
    input  clk;
    input tick;
    input[31:0]  d;
@@ -62,7 +62,7 @@ module RAM_Data_RAM( addr,
     ***************************************************************************/
    output[31:0] q;
 
-	reg  [31:0]mem[2**9:0];
+	reg  [31:0]mem[2**19:0];
 	always @ (posedge clk && tick) begin
 		if (we)
 			mem[addr] <= d;

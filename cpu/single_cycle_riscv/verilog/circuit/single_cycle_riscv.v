@@ -466,7 +466,7 @@ module single_cycle_riscv( GO,
                        .cs(s_LOGISIM_NET_94),
                        .pre(s_LOGISIM_NET_28));
 
-   ROM_Order_ROM      ROM_1 (.Address(s_LOGISIM_BUS_107[11:2]),
+   ROM_Order_ROM      ROM_1 (.Address(s_LOGISIM_BUS_107[21:2]),
                              .Data(s_LOGISIM_BUS_2[31:0]));
 
    AND_GATE #(.BubblesMask(0))
@@ -542,7 +542,7 @@ module single_cycle_riscv( GO,
                        .cs(s_LOGISIM_NET_46),
                        .pre(s_LOGISIM_NET_76));
 
-   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_61[11:2]),
+   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_61[21:2]),
                             .clk(LOGISIM_CLOCK_TREE_0[4]),
                             .tick(LOGISIM_CLOCK_TREE_0[2]),
                             .d(s_LOGISIM_BUS_88[31:0]),

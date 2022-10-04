@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Tue Oct  4 19:22:02 2022
+| Date             : Tue Oct  4 19:47:08 2022
 | Host             : BCC4 running 64-bit major release  (build 9200)
 | Command          : report_power -file LogisimToplevelShell_power_routed.rpt -pb LogisimToplevelShell_power_summary_routed.pb -rpx LogisimToplevelShell_power_routed.rpx
 | Design           : LogisimToplevelShell
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      930 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      592 |     63400 |            0.93 |
-|   CARRY4                 |    <0.001 |       48 |     15850 |            0.30 |
-|   Register               |    <0.001 |      118 |    126800 |            0.09 |
+| Slice Logic              |    <0.001 |      972 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      625 |     63400 |            0.99 |
+|   CARRY4                 |    <0.001 |       53 |     15850 |            0.33 |
+|   Register               |    <0.001 |      129 |    126800 |            0.10 |
 |   LUT as Distributed RAM |    <0.001 |       48 |     19000 |            0.25 |
-|   F7/F8 Muxes            |    <0.001 |        4 |     63400 |           <0.01 |
 |   Others                 |     0.000 |       23 |       --- |             --- |
-| Signals                  |    <0.001 |      863 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |        4 |     63400 |           <0.01 |
+| Signals                  |     0.001 |      915 |       --- |             --- |
 | DSPs                     |    <0.001 |        3 |       240 |            1.25 |
 | I/O                      |     0.012 |       19 |       210 |            9.05 |
 | Static Power             |     0.097 |          |           |                 |
@@ -144,7 +144,7 @@ Table of Contents
 | Name                   | Power (W) |
 +------------------------+-----------+
 | LogisimToplevelShell   |     0.015 |
-|   single_cycle_riscv_0 |     0.002 |
+|   single_cycle_riscv_0 |     0.003 |
 +------------------------+-----------+
 
 
