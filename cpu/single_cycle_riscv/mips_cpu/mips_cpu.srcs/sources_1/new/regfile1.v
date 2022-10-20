@@ -22,29 +22,36 @@
 
 module regfile1(
     input             clk,
-    input             wen, //Ð´Ê¹ÄÜ
+    input             wen, //Ð´Ê¹ï¿½ï¿½
     input            tick,
-    input      [4 :0] raddr1, //¶ÁµØÖ·
+    input      [4 :0] raddr1, //ï¿½ï¿½ï¿½ï¿½Ö·
     input      [4 :0] raddr2,
-    input      [4 :0] waddr, //Ð´µØÖ·
+    input      [4 :0] waddr, //Ð´ï¿½ï¿½Ö·
     input      [31:0] wdata,
-    output     [31:0] rdata1, //¶ÁÊý¾Ý
-    output     [31:0] rdata2);
+    output     [31:0] rdata1, //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    output     [31:0] rdata2,
+    input             butOn);
     
     reg [31:0] rf[31:0];
     
-    //Ð´¶Ë¿Ú
+    //Ð´ï¿½Ë¿ï¿½
     integer i;
     always @(posedge clk)
-    if(wen && tick && waddr!=5'd0)
+    if(wen && tick && waddr!=5'd0 && waddr!=5'd31)
     begin
           rf[waddr] <= wdata;
     end
+
+    always @(posedge clk)
+    begin
+        if(butOn)
+            rf[31]<=32'd1;
+    end
  
-    //¶Á¶Ë¿Ú1
+    //ï¿½ï¿½ï¿½Ë¿ï¿½1
     assign rdata1 = (raddr1==5'd0) ? 32'd0 : rf[raddr1];
  
-    //¶Á¶Ë¿Ú2
+    //ï¿½ï¿½ï¿½Ë¿ï¿½2
     assign rdata2 = (raddr2==5'd0) ? 32'd0 : rf[raddr2];
 
 endmodule

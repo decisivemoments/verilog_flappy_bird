@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Tue Oct  4 19:47:08 2022
-| Host             : BCC4 running 64-bit major release  (build 9200)
+| Date             : Thu Oct 20 22:18:30 2022
+| Host             : starssslegion running 64-bit major release  (build 9200)
 | Command          : report_power -file LogisimToplevelShell_power_routed.rpt -pb LogisimToplevelShell_power_summary_routed.pb -rpx LogisimToplevelShell_power_routed.rpx
 | Design           : LogisimToplevelShell
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.112        |
+| Total On-Chip Power (W)  | 0.155        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.015        |
+| Dynamic (W)              | 0.058        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.5         |
-| Junction Temperature (C) | 25.5         |
+| Max Ambient (C)          | 84.3         |
+| Junction Temperature (C) | 25.7         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      972 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      625 |     63400 |            0.99 |
-|   CARRY4                 |    <0.001 |       53 |     15850 |            0.33 |
-|   Register               |    <0.001 |      129 |    126800 |            0.10 |
-|   LUT as Distributed RAM |    <0.001 |       48 |     19000 |            0.25 |
-|   Others                 |     0.000 |       23 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |        4 |     63400 |           <0.01 |
-| Signals                  |     0.001 |      915 |       --- |             --- |
+| Clocks                   |     0.039 |        3 |       --- |             --- |
+| Slice Logic              |     0.002 |    10541 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     2607 |     63400 |            4.11 |
+|   CARRY4                 |    <0.001 |       87 |     15850 |            0.55 |
+|   Register               |    <0.001 |     1151 |    126800 |            0.91 |
+|   F7/F8 Muxes            |    <0.001 |     2530 |     63400 |            3.99 |
+|   LUT as Distributed RAM |    <0.001 |     4096 |     19000 |           21.56 |
+|   Others                 |     0.000 |       30 |       --- |             --- |
+| Signals                  |     0.005 |     5140 |       --- |             --- |
 | DSPs                     |    <0.001 |        3 |       240 |            1.25 |
-| I/O                      |     0.012 |       19 |       210 |            9.05 |
+| I/O                      |     0.012 |       33 |       210 |           15.71 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.112 |          |           |                 |
+| Total                    |     0.155 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.061 |       0.046 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,8 +143,13 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| LogisimToplevelShell   |     0.015 |
-|   single_cycle_riscv_0 |     0.003 |
+| LogisimToplevelShell   |     0.058 |
+|   CLOCKGEN_0           |     0.001 |
+|   single_cycle_riscv_0 |     0.044 |
+|     FPGADigit_1        |     0.001 |
+|     RAM_1              |     0.031 |
+|     regfile0           |     0.006 |
+|     vgainstance        |     0.003 |
 +------------------------+-----------+
 
 

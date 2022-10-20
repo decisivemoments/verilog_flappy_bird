@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 20 16:25:56 2022
+# Process ID: 1592
+# Current directory: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13276 C:\verilog_flappy_bird\cpu\single_cycle_riscv\mips_cpu\mips_cpu.xpr
+# Log file: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/vivado.log
+# Journal file: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1

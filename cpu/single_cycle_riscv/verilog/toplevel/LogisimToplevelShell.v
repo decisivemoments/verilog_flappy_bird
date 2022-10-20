@@ -89,11 +89,17 @@
  ******************************************************************************/
 
 `timescale 1ns/1ps
-module LogisimToplevelShell( FPGA_GlobalClock,
-                             FPGA_INPUT_PIN_0,
-                             FPGA_INPUT_PIN_1,
-                             FPGA_OUTPUT_PIN_0,
-                             FPGA_OUTPUT_PIN_1);
+module LogisimToplevelShell(  FPGA_GlobalClock,
+                              FPGA_INPUT_PIN_0,
+                              FPGA_INPUT_PIN_1,
+                              FPGA_OUTPUT_PIN_0,
+                              FPGA_OUTPUT_PIN_1,
+                              VGA_HS_O_one,
+                              VGA_VS_O_one,
+                              VGA_R_one,
+                              VGA_G_one,
+                              VGA_B_one,
+                              buttonOn_one);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -101,13 +107,18 @@ module LogisimToplevelShell( FPGA_GlobalClock,
    input  FPGA_GlobalClock;
    input  FPGA_INPUT_PIN_0;
    input  FPGA_INPUT_PIN_1;
+   input  buttonOn_one;
 
    /***************************************************************************
     ** Here the outputs are defined                                          **
     ***************************************************************************/
    output[7:0] FPGA_OUTPUT_PIN_0;
    output[7:0] FPGA_OUTPUT_PIN_1;
-
+   output wire VGA_HS_O_one;       // horizontal sync output
+   output wire VGA_VS_O_one;       // vertical sync output
+   output  [3:0] VGA_R_one;     // 4-bit VGA red output
+   output  [3:0] VGA_G_one;     // 4-bit VGA green output
+   output  [3:0] VGA_B_one;     // 4-bit VGA blue output
 
 
    /***************************************************************************
@@ -134,11 +145,11 @@ module LogisimToplevelShell( FPGA_GlobalClock,
     ** Here the clock tree components are defined                            **
     ***************************************************************************/
    LogisimTickGenerator #(.NrOfBits(32),
-                          .ReloadValue(3125000))
+                          .ReloadValue(2))
       LogisimTickGenerator_0 (.FPGAClock(FPGA_GlobalClock),
                               .FPGATick(s_FPGA_Tick));
                               
-   
+   //s_LOGISIM_CLOCK_TREE_0[4]是全局时钟
    LogisimClockComponent #(.HighTicks(1),
                            .LowTicks(1),
                            .NrOfBits(1))
@@ -155,7 +166,13 @@ module LogisimToplevelShell( FPGA_GlobalClock,
                                                  .LOGISIM_CLOCK_TREE_0(s_LOGISIM_CLOCK_TREE_0),
                                                  .NA(s_NA),
                                                  .RST(s_RST),
-                                                 .SEG(s_SEG));
+                                                 .SEG(s_SEG),
+                                                 .VGA_HS_O(VGA_HS_O_one),
+                                                 .VGA_VS_O(VGA_VS_O_one),
+                                                 .VGA_R(VGA_R_one),
+                                                 .VGA_G(VGA_G_one),
+                                                 .VGA_B(VGA_B_one),
+                                                 .buttonOn(buttonOn_one));
 
 
 endmodule

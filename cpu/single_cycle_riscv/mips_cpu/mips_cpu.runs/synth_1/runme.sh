@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1'
+HD_PWD='C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

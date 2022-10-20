@@ -1,0 +1,2448 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 20 18:38:38 2022
+# Process ID: 15764
+# Current directory: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16620 C:\verilog_flappy_bird\cpu\single_cycle_riscv\mips_cpu\mips_cpu.xpr
+# Log file: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/vivado.log
+# Journal file: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 18:49:26 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Thu Oct 20 18:52:20 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 19:15:10 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Thu Oct 20 19:19:22 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 19:28:44 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Thu Oct 20 19:29:50 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 19:35:17 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1014.910 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746988A
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 19:41:10 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+[Thu Oct 20 19:41:10 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2509.500 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746988A
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+file mkdir C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v w ]
+add_files -fileset sim_1 C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v
+update_compile_order -fileset sim_1
+set_property top tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2586.730 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'VGA_HS_tb' is not permitted [C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v:54]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'VGA_VS_tb' is not permitted [C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v:55]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'VGA_R_tb' is not permitted [C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v:56]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'VGA_G_tb' is not permitted [C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v:57]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'VGA_B_tb' is not permitted [C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v:58]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2586.730 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2600.848 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct 20 20:01:49 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 20 20:01:49 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2600.848 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 2617.887 ; gain = 17.039
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 20:03:39 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2643.805 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2643.805 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2643.805 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 2644.488 ; gain = 0.684
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+step
+Stopped at time : 751005 ns : File "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" Line 46
+step
+Stopped at time : 751005 ns : File "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" Line 46
+run 1 ms
+run 1 ms
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/tb/tbins/single_cycle_riscv_0/REGISTER_FILE_1/Q}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2646.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2647.406 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2647.406 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 2647.938 ; gain = 0.531
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 s
+run: Time (s): cpu = 00:00:47 ; elapsed = 00:01:48 . Memory (MB): peak = 2889.621 ; gain = 3.180
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/tb/tbins/single_cycle_riscv_0/vgaaddress}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'addr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:586]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 11 for port 'vgaaddr' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:592]
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2889.621 ; gain = 0.000
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/tb/tbins/single_cycle_riscv_0/RAM_1/vgaaddr}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2889.621 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2889.621 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 2889.621 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 100 ms
+run: Time (s): cpu = 00:04:19 ; elapsed = 00:01:44 . Memory (MB): peak = 3571.461 ; gain = 9.980
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 20:34:31 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+[Thu Oct 20 20:34:31 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3571.461 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746988A
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 20:58:02 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+[Thu Oct 20 20:58:02 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+close_hw_manager
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3571.461 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746988A
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3571.461 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3571.461 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 3571.461 ; gain = 0.000
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb/tbins/single_cycle_riscv_0/RAM_1/vgaaddr}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3571.461 ; gain = 0.000
+run 100 ms
+run: Time (s): cpu = 00:00:57 ; elapsed = 00:01:55 . Memory (MB): peak = 3574.555 ; gain = 3.094
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb/tbins/single_cycle_riscv_0/vgainstance/address}} 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 21:21:20 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+save_wave_config {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg
+set_property xsim.view C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_hw_manager
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3574.555 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 3574.555 ; gain = 0.000
+run 10 ms
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 3574.555 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 21:25:25 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 3574.555 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 855 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3574.555 ; gain = 0.000
+INFO: [Common 17-344] 'open_run' was cancelled
+open_hw_manager
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/vivado_pid15764.debug)
+ERROR: [Common 17-39] 'open_hw_manager' failed due to earlier errors.
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 3574.555 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292746988A
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 21:40:05 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+[Thu Oct 20 21:40:05 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3574.555 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3574.555 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 3574.555 ; gain = 0.000
+run 10 ms
+run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3574.555 ; gain = 0.000
+run 10 ms
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 3574.555 ; gain = 0.000
+run 1 s
+run: Time (s): cpu = 00:05:01 ; elapsed = 00:06:14 . Memory (MB): peak = 4213.617 ; gain = 639.062
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Thu Oct 20 22:10:37 2022] Launched synth_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Thu Oct 20 22:12:08 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Oct 20 22:18:54 2022] Launched impl_1...
+Run output will be captured here: C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1/LogisimToplevelShell.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_5_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_9_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_12_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_20_32_SIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bit_Extender_8_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FPGADigit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimClockComponent
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimTickGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LogisimToplevelShell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MULL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplexer_bus_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_10_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_11_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_15_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_21_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_3_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_6_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_7_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_8_INPUTS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTER_FLIP_FLOP_PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Order_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shifter_32_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XOR_GATE_BUS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hardwired_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevenseg_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_cycle_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4213.617 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+"xelab -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec3262b028e24b2ab7d02cd710c30f57 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 20 differs from formal bit length 18 for port 'address' [C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v:599]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.LogisimTickGenerator(NrOfBits=32...
+Compiling module xil_defaultlib.LogisimClockComponent
+Compiling module xil_defaultlib.Comparator(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=32)
+Compiling module xil_defaultlib.OR_GATE(BubblesMask=0)
+Compiling module xil_defaultlib.Bit_Extender_8_32
+Compiling module xil_defaultlib.Adder(ExtendedBits=33,NrOfBits=3...
+Compiling module xil_defaultlib.Multiplexer_bus_4(NrOfBits=8)
+Compiling module xil_defaultlib.AND_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_3_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=5)
+Compiling module xil_defaultlib.NOT_GATE
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC(NrOfBits=3...
+Compiling module xil_defaultlib.ROM_Order_ROM
+Compiling module xil_defaultlib.Bit_Extender_12_32_SIGN
+Compiling module xil_defaultlib.Bit_Extender_20_32_SIGN
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.FPGADigit
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP(NrOfBits=32)
+Compiling module xil_defaultlib.REGISTER_FLIP_FLOP_PC
+Compiling module xil_defaultlib.RAM_Data_RAM
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.Shifter_32_bit
+Compiling module xil_defaultlib.Multiplexer_bus_2(NrOfBits=12)
+Compiling module xil_defaultlib.LogisimCounter(max_val=65535,wid...
+Compiling module xil_defaultlib.Multiplexer_bus_16(NrOfBits=32)
+Compiling module xil_defaultlib.Multiplexer_16
+Compiling module xil_defaultlib.XOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.Subtractor(ExtendedBits=33,NrOfB...
+Compiling module xil_defaultlib.NOR_GATE_BUS(BubblesMask=0,NrOfB...
+Compiling module xil_defaultlib.OR_GATE_BUS(BubblesMask=0,NrOfBi...
+Compiling module xil_defaultlib.MULL(NrOfBits=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.AND_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_10_INPUTS(BubblesMask=0...
+Compiling module xil_defaultlib.OR_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_10_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_15_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_8_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.arithmetic_controller
+Compiling module xil_defaultlib.AND_GATE_5_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_7_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_9_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.AND_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_6_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_21_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.OR_GATE_11_INPUTS(BubblesMask=0)
+Compiling module xil_defaultlib.signal_generator
+Compiling module xil_defaultlib.hardwired_controller
+Compiling module xil_defaultlib.regfile1
+Compiling module xil_defaultlib.single_cycle_riscv
+Compiling module xil_defaultlib.LogisimToplevelShell
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4213.617 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 4213.617 ; gain = 0.000
+run 10 ms
+run: Time (s): cpu = 00:01:00 ; elapsed = 00:00:22 . Memory (MB): peak = 4347.617 ; gain = 0.000
+run 100 ms
+run: Time (s): cpu = 00:01:55 ; elapsed = 00:01:10 . Memory (MB): peak = 4347.715 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Vivado 12-106] *** Exception: java.lang.IllegalArgumentException: model passed to DefaultTableModelWrapper cannot be null (See C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/vivado_pid15764.debug)
+close_project
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/vivado_pid15764.debug)

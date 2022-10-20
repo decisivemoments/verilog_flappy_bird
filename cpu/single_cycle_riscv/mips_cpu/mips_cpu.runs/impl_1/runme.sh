@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/honghongyu/verilog/gruoptask-zhuan/cpu21-riscv-group1/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1'
+HD_PWD='C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log LogisimToplevelShell.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source LogisimToplevelShell.tcl -notrace
 
 

@@ -14,7 +14,8 @@ module RegFIle( Clk,
                 WAdr,
                 WE,
                 R1,
-                R2);
+                R2,
+                butOn);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -26,6 +27,7 @@ module RegFIle( Clk,
    input[4:0]  R2Adr;
    input[4:0]  WAdr;
    input  WE;
+   input butOn;
 
    /***************************************************************************
     ** Here the outputs are defined                                          **
@@ -515,8 +517,8 @@ module RegFIle( Clk,
    REGISTER_FLIP_FLOP_s31 #(.ActiveLevel(1),
                             .NrOfBits(32))
       REGISTER_FILE_9 (.Clock(LOGISIM_CLOCK_TREE_0[4]),
-                       .ClockEnable(s_LOGISIM_NET_11),
-                       .D(s_LOGISIM_BUS_136[31:0]),
+                       .ClockEnable(butOn),
+                       .D(1),
                        .Q(s_LOGISIM_BUS_109[31:0]),
                        .Reset(s_LOGISIM_NET_7),
                        .Tick(LOGISIM_CLOCK_TREE_0[2]),

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9760001fs"></ZoomEndTime>
+      <Cursor1Time time="19205000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="178"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/go" type="logic">
+      <obj_property name="ElementShortName">go</obj_property>
+      <obj_property name="ObjectShortName">go</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/SEG" type="array">
+      <obj_property name="ElementShortName">SEG[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/AN" type="array">
+      <obj_property name="ElementShortName">AN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/VGA_HS_tb" type="logic">
+      <obj_property name="ElementShortName">VGA_HS_tb</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/VGA_VS_tb" type="logic">
+      <obj_property name="ElementShortName">VGA_VS_tb</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/VGA_R_tb" type="array">
+      <obj_property name="ElementShortName">VGA_R_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/VGA_G_tb" type="array">
+      <obj_property name="ElementShortName">VGA_G_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/VGA_B_tb" type="array">
+      <obj_property name="ElementShortName">VGA_B_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/button_tb" type="logic">
+      <obj_property name="ElementShortName">button_tb</obj_property>
+      <obj_property name="ObjectShortName">button_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/tbins/single_cycle_riscv_0/RAM_1/vgaaddr" type="array">
+      <obj_property name="ElementShortName">vgaaddr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaaddr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/tbins/single_cycle_riscv_0/vgainstance/address" type="array">
+      <obj_property name="ElementShortName">address[17:0]</obj_property>
+      <obj_property name="ObjectShortName">address[17:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -10,7 +10,13 @@ module single_cycle_riscv( GO,
                            LOGISIM_CLOCK_TREE_0,
                            RST,
                            NA,
-                           SEG);
+                           SEG,
+                           VGA_HS_O,
+                           VGA_VS_O,
+                           VGA_R,
+                           VGA_G,
+                           VGA_B,
+                           buttonOn);
 
    /***************************************************************************
     ** Here the inputs are defined                                           **
@@ -18,12 +24,18 @@ module single_cycle_riscv( GO,
    input  GO;
    input[4:0]  LOGISIM_CLOCK_TREE_0;
    input  RST;
+   input buttonOn;
 
    /***************************************************************************
     ** Here the outputs are defined                                          **
     ***************************************************************************/
    output[7:0] NA;
    output[7:0] SEG;
+   output wire VGA_HS_O;       // horizontal sync output
+   output wire VGA_VS_O;       // vertical sync output
+   output reg [3:0] VGA_R;     // 4-bit VGA red output
+   output reg [3:0] VGA_G;     // 4-bit VGA green output
+   output reg [3:0] VGA_B;     // 4-bit VGA blue output
 
    /***************************************************************************
     ** Here the internal wires are defined                                   **
@@ -140,7 +152,36 @@ module single_cycle_riscv( GO,
    wire s_LOGISIM_NET_97;
    wire s_LOGISIM_NET_99;
 
-
+   wire[19:0] vgaaddress;
+   reg [11:0] colour;
+   wire [31:0] vgavaluefromaddr;
+   reg highorlow;
+   initial
+   begin
+      highorlow=0;
+   end
+   wire active;
+   always @ (posedge LOGISIM_CLOCK_TREE_0[4])
+   begin
+      if(active)
+      begin
+         if(highorlow)
+         begin   
+            colour <= vgavaluefromaddr[15:4];
+            highorlow<=~highorlow;
+         end
+         else
+         begin
+            colour <= vgavaluefromaddr[31:20];
+            highorlow<=~highorlow;
+         end
+      end
+      else
+         colour <=0;
+      VGA_R <= colour[11:8];
+      VGA_G <= colour[7:4];
+      VGA_B <= colour[3:0];
+   end
    /***************************************************************************
     ** Here all clock generator connections are defined                      **
     ***************************************************************************/
@@ -542,12 +583,21 @@ module single_cycle_riscv( GO,
                        .cs(s_LOGISIM_NET_46),
                        .pre(s_LOGISIM_NET_76));
 
-   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_61[21:2]),
+   RAM_Data_RAM      RAM_1 (.addr(s_LOGISIM_BUS_61[13:2]),
                             .clk(LOGISIM_CLOCK_TREE_0[4]),
                             .tick(LOGISIM_CLOCK_TREE_0[2]),
                             .d(s_LOGISIM_BUS_88[31:0]),
                             .q(s_LOGISIM_BUS_57[31:0]),
-                            .we(s_LOGISIM_NET_15));
+                            .we(s_LOGISIM_NET_15),
+                            .vgaaddr(vgaaddress[13:2]),
+                            .vgavalue(vgavaluefromaddr));
+
+   vga vgainstance(.i_clk(LOGISIM_CLOCK_TREE_0[4]),
+                  .i_rst(RST),
+                  .o_hs(VGA_HS_O),
+                  .o_vs(VGA_VS_O),
+                  .address(vgaaddress),
+                  .o_active(active));
 
    Adder #(.ExtendedBits(33),
            .NrOfBits(32))
@@ -683,6 +733,7 @@ module single_cycle_riscv( GO,
                            .raddr1(s_LOGISIM_BUS_48[4:0]),
                            .rdata2(s_LOGISIM_BUS_88[31:0]),
                            .raddr2(s_LOGISIM_BUS_60[4:0]),
-                           .waddr(s_LOGISIM_BUS_2[11:7]));
+                           .waddr(s_LOGISIM_BUS_2[11:7]),
+                           .butOn(buttonOn));
 
 endmodule
