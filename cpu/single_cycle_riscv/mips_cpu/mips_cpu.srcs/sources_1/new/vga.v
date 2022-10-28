@@ -26,13 +26,11 @@ module vga(
     output wire o_hs,           // horizontal sync
     output wire o_vs,           // vertical sync
     output wire o_active,       // high during active pixel drawing
-    output wire o_screenend,    // high for one tick at the end of screen
-    output wire o_animate,      // high for one tick at end of active drawing
-    output wire [9:0] o_x,      // current pixel x position
-    output wire [8:0] o_y,      // current pixel y position
     output wire [17:0] address 
     );
 
+    wire [9:0] o_x;
+    wire [8:0] o_y;
     reg i_pix_stb;       // pixel clock strobe
     reg [15:0] cnt;
     initial begin
@@ -73,12 +71,6 @@ module vga(
 
     // active: high during active pixel drawing
     assign o_active = ~((h_count < HA_STA) | (v_count > VA_END - 1));
-
-    // screenend: high for one tick at the end of the screen
-    assign o_screenend = ((v_count == SCREEN - 1) & (h_count == LINE));
-
-    // animate: high for one tick at the end of the final active pixel line
-    assign o_animate = ((v_count == VA_END - 1) & (h_count == LINE));
 
     always @ (posedge i_clk)
     begin

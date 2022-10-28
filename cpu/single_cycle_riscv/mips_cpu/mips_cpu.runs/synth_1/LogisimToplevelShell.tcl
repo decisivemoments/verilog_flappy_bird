@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/LogisimToplevelShell.tcl"
+  variable script "D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.runs/synth_1/LogisimToplevelShell.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,16 +71,18 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache C:/Users/xt116/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8980-starssslegion/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.cache/wt [current_project]
-set_property parent.project_path C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.xpr [current_project]
+set_property webtalk.parent_dir D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.cache/wt [current_project]
+set_property parent.project_path D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.cache/ip [current_project]
@@ -88,60 +90,60 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v
-  C:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/ALU.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_10_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_5_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_6_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_7_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_8_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_9_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/AND_GATE_BUS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Adder.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_12_32_SIGN.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_20_32_SIGN.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/wiring/Bit_Extender_8_32.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Comparator.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/Counter.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/FPGADigit.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimClockComponent.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/LogisimCounter.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/base/LogisimTickGenerator.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/MULL.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_16.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_16.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_2.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/plexers/Multiplexer_bus_4.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOR_GATE_BUS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/NOT_GATE.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_10_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_11_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_15_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_21_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_3_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_6_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_7_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_8_INPUTS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/OR_GATE_BUS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/RAM_Data_RAM.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/REGISTER_FLIP_FLOP_PC.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/memory/ROM_Order_ROM.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Shifter_32_bit.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/arithmetic/Subtractor.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/gates/XOR_GATE_BUS.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/arithmetic_controller.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/decoder3_8.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/display_sel.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/divider.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/hardwired_controller.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/regfile1.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/io/sevenseg_dec.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/signal_generator.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/circuit/single_cycle_riscv.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/mips_cpu/mips_cpu.srcs/sources_1/new/vga.v
+  D:/verilog_flappy_bird/cpu/single_cycle_riscv/verilog/toplevel/LogisimToplevelShell.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -152,8 +154,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/verilog_flappy_bird/cpu/single_cycle_riscv/xdc/LogisimToplevelShell.xdc
-set_property used_in_implementation false [get_files C:/verilog_flappy_bird/cpu/single_cycle_riscv/xdc/LogisimToplevelShell.xdc]
+read_xdc D:/verilog_flappy_bird/cpu/single_cycle_riscv/xdc/LogisimToplevelShell.xdc
+set_property used_in_implementation false [get_files D:/verilog_flappy_bird/cpu/single_cycle_riscv/xdc/LogisimToplevelShell.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -32,7 +32,8 @@ module regfile1(
     output     [31:0] rdata2,
     input             butOn);
     
-    reg [31:0] rf[31:0];
+    reg [31:0] rf[30:0];
+    reg [31:0] rf31;
     
     //д�˿�
     integer i;
@@ -41,17 +42,23 @@ module regfile1(
     begin
           rf[waddr] <= wdata;
     end
+    
+    initial
+    begin
+        rf[30] = 32'd0;
+        rf31 = 32'd0;
+    end
 
     always @(posedge clk)
-    begin
-        if(butOn)
-            rf[31]<=32'd1;
-    end
+    if(wen && tick && waddr==5'd31)
+        rf31 <= wdata ;
+    else if(butOn)
+        rf31<=32'd1;
  
     //���˿�1
-    assign rdata1 = (raddr1==5'd0) ? 32'd0 : rf[raddr1];
+    assign rdata1 = (raddr1==5'd0) ? 32'd0 : ((raddr1==5'd31) ?rf31:rf[raddr1]);
  
     //���˿�2
-    assign rdata2 = (raddr2==5'd0) ? 32'd0 : rf[raddr2];
+    assign rdata2 = (raddr2==5'd0) ? 32'd0 :  ((raddr2==5'd31) ?rf31:rf[raddr2]);
 
 endmodule
